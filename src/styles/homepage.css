@@ -23,13 +23,12 @@ div.welcome-header p {
 
 div.welcome-header .left {
   /*max-width: 550px;*/
-  width: 100%;
   position: relative;
   min-width: 350px;
 }
 
 div.welcome-header {
-  min-height: 100vh;
+  /*min-height: 100vh;*/
   display: flex;
   max-width: 1044px;
   margin: 0 auto;
@@ -46,9 +45,38 @@ div.left img {
 
 }
 
+.homepage-socials, .welcome-message {
+  display: flex;
+  width: 255px;
+  justify-content: space-around;
+}
+
 div.welcome-header .right {
   margin-left: 80px;
+  margin-top: 120px;
   position: relative;
+}
+
+.welcome-message h1 {
+  margin-bottom: 0px;
+}
+
+.homepage-text {
+}
+
+.goings-on {
+  margin-top: 150px;
+  max-width: 1044px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+}
+
+.goings-on .left {
+  width: 50%;
+  position: absolute;
+  left: -100px;
+  top: -50px;
 }
 
 /* Ugly overwrites */
@@ -72,15 +100,24 @@ div.style-module--ContentWrapper --XYxH4 {
     box-shadow: 0px 2px 5px 0px #CEE4F9;
   }
 
-  div.welcome-header .right:after {
+  div.welcome-header .left:after {
     position: absolute;
     content: "";
     height: 552px;
-    width: 100%;
-    top: 0;
-    left: 0;
+    width: 414px;
+    top: -207px;
+    left: -80px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0) 100%);
     border-radius: 414px;
+
+  }
+
+  .style-module--Header--mZOzg, .style-module--TopNavigationBar--V0syT {
+    background-color: #646F7A;
+  }
+
+  .social-icon {
+    fill: #fafafa;
   }
 }
 
