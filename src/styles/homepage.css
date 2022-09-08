@@ -22,7 +22,10 @@ div.welcome-header p {
 }
 
 div.welcome-header .left {
-  max-width: 550px;
+  /*max-width: 550px;*/
+  width: 100%;
+  position: relative;
+  min-width: 350px;
 }
 
 div.welcome-header {
@@ -32,10 +35,13 @@ div.welcome-header {
   margin: 0 auto;
 }
 
-div.welcome-header img {
+div.left img {
   max-width: 414px;
   border-radius: 414px;
   filter: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  left: -80px;
+  top: -207px;
   /*background: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0) 100%), url(/profile.jpg);*/
 
 }
