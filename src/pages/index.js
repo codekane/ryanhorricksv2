@@ -14,9 +14,10 @@ import "../styles/homepage.css";
 function HomepageText(props) {
   return(
     <div className="homepage-text">
-      <p>My name is Ryan Horricks, and I’m a Full-Stack Developer based out of Edmonton, Alberta with 5 years of experience.</p>
-      <p>Currently I’m working Part-Time as a Front End Developer with Advision eCommerce, in addition to working with clients as a Freelancer. I enjoy solving complex problems, making beautiful websites, building cool applications, and dreaming of better ways to live.</p>
-      <p>Besides code, I like to climb rocks, go to shows, play guitar, and I’m learning how to write for an audience.</p>
+      <p>If you’ve come here, then you’re interested in me, for some reason. Perhaps you’re considering me for a job, or you’re a follower who took an interest. </p>
+      <p>Whatever the reason, I’m glad that you came. 
+        You’re in for an adventure.</p>
+      {/*<p>Besides code, I like to climb rocks, go to shows, play guitar, and I’m learning how to write for an audience.</p>*/}
 
     </div>
 
@@ -113,18 +114,25 @@ function Hello(props) {
     <>
       <div className="welcome-header">
         <div className="left">
+          <a className="homepage-link" href="/" aria-label="home" aria-current="page">
+            <div class="style-module--ContentWrapper --XYxH4">
+              Ryan Horricks
+            </div>
+          </a>
           <img src={"/profile.jpg"} />
         </div>
         <div className="right">
-          <div className="welcome-message">
-            <h1>Welcome!</h1>
+          <div className="intro-container">
+            <div className="welcome-message">
+              <h1>Welcome!</h1>
+            </div>
+            <Socials />
           </div>
-          <Socials />
+          <HomepageText />
         </div>
       </div>
       <div className="goings-on">
         <div className="left">
-      <HomepageText />
         </div>
 
         <div className="right">

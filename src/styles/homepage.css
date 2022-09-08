@@ -25,6 +25,7 @@ div.welcome-header .left {
   /*max-width: 550px;*/
   position: relative;
   min-width: 350px;
+  position: fixed;
 }
 
 div.welcome-header {
@@ -32,6 +33,11 @@ div.welcome-header {
   display: flex;
   max-width: 1044px;
   margin: 0 auto;
+  margin-top: 100px;
+}
+
+div.left {
+  margin-top: 100px;
 }
 
 div.left img {
@@ -40,20 +46,41 @@ div.left img {
   filter: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0) 100%);
   position: absolute;
   left: -80px;
-  top: -207px;
+  top: -300px;
   /*background: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0) 100%), url(/profile.jpg);*/
-
 }
 
-.homepage-socials, .welcome-message {
+/* Fix the duplicaiton of nav elements */
+.style-module--ContentWrapper--6BjK8 > a:nth-child(1) > div:nth-child(1) {
+}
+/* This might have just broken night mode! */
+.homepage-socials {
   display: flex;
   width: 255px;
   justify-content: space-around;
 }
 
+header  .style-module--ContentWrapper {
+  color: var(--primary-color);
+}
+
+.welcome-message {
+  display: flex;
+  justify-content: space-around;
+}
+
+.welcome-message {
+  flex-direction: column;
+}
+
+.my-name {
+  position: fixed;
+  z-index: 200;
+}
+
 div.welcome-header .right {
-  margin-left: 80px;
-  margin-top: 120px;
+  margin-left: 500px;
+  margin-top: 30px;
   position: relative;
 }
 
@@ -61,7 +88,14 @@ div.welcome-header .right {
   margin-bottom: 0px;
 }
 
+.intro-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .homepage-text {
+  margin-top: 60px;
 }
 
 .goings-on {
@@ -80,7 +114,7 @@ div.welcome-header .right {
 }
 
 /* Ugly overwrites */
-div.style-module--ContentWrapper --XYxH4 {
+header div.style-module--ContentWrapper --XYxH4 {
   padding: 0;
   max-width: 1044px;
 }
@@ -91,8 +125,32 @@ div.style-module--ContentWrapper --XYxH4 {
 
 }
 
-.style-module--Logo--xzURL {
+.welcome-header .left a.homepage-link {
+  position: fixed;
+  top: 38px;
+  z-index: 100;
   letter-spacing: 6px;
+  color: var(--primary-color);
+  font-weight: 900;
+}
+
+.left {
+  z-index: 2;
+}
+
+header.style-module--Header--mZOzg {
+  z-index: 1;
+}
+
+header .style-module--Logo--xzURL {
+  letter-spacing: 6px;
+  position: fixed;
+  width: 300px;
+  top: 40px;
+}
+
+.style-module--Header--mZOzg {
+  position: fixed;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -116,6 +174,10 @@ div.style-module--ContentWrapper --XYxH4 {
     background-color: #646F7A;
   }
 
+  .style-module--Header--mZOzg {
+    position: fixed;
+  }
+
   .social-icon {
     fill: #fafafa;
   }
@@ -123,6 +185,9 @@ div.style-module--ContentWrapper --XYxH4 {
 
 @media only screen and (max-width: 1058px) {
 
+  div.welcome-header .right {
+    margin-left: 400px;
+  }
 
   .style-module--Header--mZOzg {
     padding-left: 20px;
@@ -136,7 +201,54 @@ div.style-module--ContentWrapper --XYxH4 {
   }
 }
 
+.welcome-header .left .style-module--ContentWrapper {
+  font-size: 2rem;
+}
 
+@media only screen and (max-width: 950px) {
+  div.welcome-header .right {
+    margin-left: 350px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .welcome-header {
+    display: flex;
+    flex-direction: column;
+  }
+  div.welcome-header .right {
+    margin-left: 0px;
+    margin-top: 400px;
+  }
+
+  div.welcome-header .left {
+    position: absolute;
+  }
+
+  header .style-module--Logo--xzURL {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  div.welcome-header .right {
+    margin-top: 300px;
+  }
+  div.left img {
+    max-width: 362px;
+  }
+}
+
+@media only screen and (max-width: 359px) {
+
+  div.left img {
+    max-width: 324px;
+  }
+
+  .welcome-header .left .style-module--ContentWrapper {
+    font-size: 1.5rem !important;
+  }
+}
 
 
 
