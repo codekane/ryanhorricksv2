@@ -1,0 +1,99 @@
+:root {
+  --page-width: 1044px;
+  --page-padding: 0;
+}
+
+div.welcome-header h1 {
+  font-size: 48px;
+  line-height: 90px;
+  /* height: 90px;*/
+}
+
+div.welcome-header p {
+  font-size: 20px;
+  font-family: avenir-next, sans-serif;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+}
+
+@font-face {
+  font-family: avenir-next;
+  src: url("../fonts/AvenirNextLTPro-Regular.otf");
+}
+
+div.welcome-header .left {
+  max-width: 550px;
+}
+
+div.welcome-header {
+  min-height: 100vh;
+  display: flex;
+  max-width: 1044px;
+  margin: 0 auto;
+}
+
+div.welcome-header img {
+  max-width: 414px;
+  border-radius: 414px;
+  filter: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0) 100%);
+  /*background: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0) 100%), url(/profile.jpg);*/
+
+}
+
+div.welcome-header .right {
+  margin-left: 80px;
+  position: relative;
+}
+
+/* Ugly overwrites */
+div.style-module--ContentWrapper --XYxH4 {
+  padding: 0;
+  max-width: 1044px;
+}
+
+
+.style-module--Header--mZOzg, .style-module--TopNavigationBar--V0syT {
+  background-color: #CDE3F8;
+
+}
+
+.style-module--Logo--xzURL {
+  letter-spacing: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .style-module--Header--mZOzg {
+    box-shadow: 0px 2px 5px 0px #CEE4F9;
+  }
+
+  div.welcome-header .right:after {
+    position: absolute;
+    content: "";
+    height: 552px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 414px;
+  }
+}
+
+@media only screen and (max-width: 1058px) {
+
+
+  .style-module--Header--mZOzg {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  div.welcome-header {
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+}
+
+
+
+
+
