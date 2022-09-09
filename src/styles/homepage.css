@@ -163,7 +163,7 @@ header .style-module--Logo--xzURL {
     content: "";
     height: 552px;
     width: 414px;
-    top: -207px;
+    top: -300px;
     left: -80px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0) 100%);
     border-radius: 414px;
@@ -211,7 +211,7 @@ header .style-module--Logo--xzURL {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .welcome-header {
     display: flex;
     flex-direction: column;
