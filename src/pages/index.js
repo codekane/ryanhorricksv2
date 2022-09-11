@@ -123,24 +123,29 @@ function Hello(props) {
         </div>
         <div className="right">
           <div className="intro-container">
-            <div className="welcome-message">
-              <h1>Welcome!</h1>
+            <div className="welcome-message">              <h1>Welcome!</h1>
             </div>
             <Socials />
           </div>
           <HomepageText />
         </div>
       </div>
-      <div className="goings-on">
-        <div className="left">
-        </div>
-
-        <div className="right">
-
-        </div>
-
-      </div>
     </>
+
+  )
+}
+
+export function LeftSideHero() {
+  return (
+    <div className="left">
+      <a className="homepage-link" href="/" aria-label="home" aria-current="page">
+        <div class="style-module--ContentWrapper --XYxH4">
+          Ryan Horricks
+        </div>
+      </a>
+      <img src={"/profile.jpg"} />
+    </div>
+
 
   )
 }
@@ -150,7 +155,17 @@ export default function IndexPage() {
     <>
       <Seo title="Ryan Horricks" />
       <Page>
-        <Hello />
+        <div className="welcome-header">
+          <LeftSideHero />
+                    <div className="right">
+            <div className="intro-container">
+              <div className="welcome-message">              <h1>Welcome!</h1>
+              </div>
+              <Socials />
+            </div>
+            <HomepageText />
+          </div>
+        </div>
         {/*
         <HeroSection sectionId="hero" />
         <ArticlesSection sectionId="articles" heading="Latest Articles" sources={['Medium']} />
