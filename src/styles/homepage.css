@@ -153,6 +153,14 @@ header .style-module--Logo--xzURL {
   position: fixed;
 }
 
+footer .style-module--Logo--xzURL {
+  display: none;
+}
+
+header .style-module--Logo-xzURL {
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
   .style-module--Header--mZOzg {
     box-shadow: 0px 2px 5px 0px #CEE4F9;

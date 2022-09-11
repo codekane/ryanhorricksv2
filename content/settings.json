@@ -20,10 +20,8 @@
     "logo": { "text": "Ryan Horricks" },
     "navigation": {
       "header": [
-        { "label": "About", "url": "/#about" },
-        { "label": "Blog", "url": "/blog" },
-        { "label": "Features", "url": "/#features" },
-        { "label": "Github", "url": "/#github" }
+        { "label": "Home", "url": "/" },
+        { "label": "Portfolio", "url": "/portfolio" }
       ],
       "ctaButton": {
         "openNewTab": true,
@@ -31,8 +29,6 @@
         "url": "/resume.pdf"
       },
       "footer": [
-        { "label": "Privacy", "url": "/privacy" },
-        { "label": "Imprint", "url": "/imprint" }
       ]
     },
     "featureToggles": {
