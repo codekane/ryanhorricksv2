@@ -123,7 +123,8 @@ function Hello(props) {
         </div>
         <div className="right">
           <div className="intro-container">
-            <div className="welcome-message">              <h1>Welcome!</h1>
+            <div className="welcome-message">
+              <h1>Welcome!</h1>
             </div>
             <Socials />
           </div>
@@ -145,8 +146,6 @@ export function LeftSideHero() {
       </a>
       <img src={"/profile.jpg"} />
     </div>
-
-
   )
 }
 
@@ -157,9 +156,10 @@ export default function IndexPage() {
       <Page>
         <div className="welcome-header">
           <LeftSideHero />
-                    <div className="right">
+          <div className="right">
             <div className="intro-container">
-              <div className="welcome-message">              <h1>Welcome!</h1>
+              <div className="welcome-message">
+                <h1>Welcome!</h1>
               </div>
               <Socials />
             </div>

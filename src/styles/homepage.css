@@ -260,3 +260,23 @@ header .style-module--Logo-xzURL {
 
 
 
+
+/* Project Slide Section */
+
+
+
+/* Project Slide Section */
+
+.project-slide {
+  width: 602px;
+  height: 174px;
+  background-color: #FBFEFF;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0px 4px 4px #CDE3F8;
+}
+
+.slide-image-container img {
+  width: 150px;
+  height: 150px;
+}

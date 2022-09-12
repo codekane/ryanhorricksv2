@@ -10,23 +10,45 @@ import {
   Seo,
 } from "gatsby-theme-portfolio-minimal";
 import "../styles/homepage.css";
+import { LeftSideHero } from "./index";
 
 
+function Project() {
+  return(
+  <>
+    <div className="project-slide">
+      <div className="slide-image-container">
+        <img src={"/profile.jpg"} />
+      </div>
+
+    </div>
+  </>
+  )
+}
 
 export default function PortfolioPage() {
   return(
     <>
       <Seo title="Ryan Horricks -- Portfolio" />
       <Page>
-        {/*<Hello />*/}
-        {/*
-        <HeroSection sectionId="hero" />
-        <ArticlesSection sectionId="articles" heading="Latest Articles" sources={['Medium']} />
-        <AboutSection sectionId="about" heading="About Portfolio Minimal" />
-        <InterestsSection sectionId="details" heading="Details" />
+        <div className="welcome-header">
+          <LeftSideHero />
+          <div className="right">
+            <div className="intro-container">
+              <div className="welcome-message">
+                <h1>Portfolio</h1>
+              </div>
+            </div>
+
+            <Project />
+            <Project />
+            <Project />
+
         <ProjectsSection sectionId="features" heading="Built-in Features" />
-        <ContactSection sectionId="github" heading="Issues?" />
-        */}
+
+            <h2>Hello World</h2>
+          </div>
+        </div>
       </Page>
     </>  )
 }
