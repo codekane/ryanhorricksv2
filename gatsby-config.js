@@ -25,5 +25,13 @@ module.exports = {
         // }
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: 'portfolio',
+        path: `${__dirname}/src/portfolio`
+      },
+    },
+    `gatsby-transformer-remark`
   ],
 };
