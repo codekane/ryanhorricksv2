@@ -2,7 +2,8 @@
 slug: "/portfolio/spokebooks"
 date: "2020-01-30"
 title: "Bespoke Notebooks"
-excerpt: ""
+excerpt: "A line of notebooks and pocketbooks that I ruthly iterated on, seeking
+something sort of perfect. I'd like to think I succeeded."
 thumbnail: "./thumbnails/dontpanic.png"
 type: "project"
 images: []
