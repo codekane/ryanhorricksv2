@@ -10,3 +10,6 @@ published: true
 live_url: ""
 github_url: ""
 ---
+
+This story is sealed until June 06, 2024, but I made this website, and you're
+allowed to see that.

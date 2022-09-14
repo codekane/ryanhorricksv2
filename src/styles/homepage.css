@@ -293,9 +293,12 @@ header .style-module--Logo-xzURL {
 
 .slide-image-container {
   height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .slide-image-container img {
   width: 174px;
-  height: 100%;
+  max-height: 100%;
 }
