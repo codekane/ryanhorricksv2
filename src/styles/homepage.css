@@ -283,12 +283,18 @@ header .style-module--Logo-xzURL {
   flex-direction: column;
   margin-left: 24px;
   margin-top: 16px;
+  width: 100%;
 }
 
 .slide-title {
   font-size: 20px;
   font-weight: 500;
+}
+
+.slide-date {
   margin-bottom: 16px;
+  text-align: right;
+  margin-right: 16px;
 }
 
 .slide-image-container {

@@ -25,6 +25,7 @@ function Project(props) {
           </div>
           <div className="slide-text">
             <span className="slide-title">{props.project.title}</span>
+            <span className="slide-date">{props.project.date}</span>
             <span className="slide-excerpt">{props.project.excerpt}</span>
           </div>
 
@@ -69,8 +70,7 @@ function Project(props) {
       export const pageQuery = graphql`
       query {
         allMarkdownRemark(filter: {frontmatter: {type: {eq: "project"}}}
-                          sort: {fields: frontmatter___date, order: DESC}
-        ) {
+                          sort: {fields: frontmatter___date, order: DESC}) {
           nodes {
             frontmatter {
               title
