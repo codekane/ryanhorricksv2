@@ -69,7 +69,7 @@ function Project(props) {
 
       export const pageQuery = graphql`
       query {
-        allMarkdownRemark(filter: {frontmatter: {type: {eq: "project"}}}
+        allMarkdownRemark(filter: {frontmatter: {type: {eq: "project"}, published: {ne: false}}}
                           sort: {fields: frontmatter___date, order: DESC}) {
           nodes {
             frontmatter {

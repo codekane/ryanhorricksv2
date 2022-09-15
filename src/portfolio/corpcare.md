@@ -6,7 +6,7 @@ excerpt: "Designed in Figma, built in Webflow, and a public example of work othe
 thumbnail: "./thumbnails/corpcare.png"
 type: "project"
 images: []
-published: true
+published: false
 live_url: ""
 github_url: ""
 ---

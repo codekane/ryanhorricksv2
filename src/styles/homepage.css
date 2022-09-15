@@ -166,6 +166,10 @@ header .style-module--Logo-xzURL {
     box-shadow: 0px 2px 5px 0px #CEE4F9;
   }
 
+  .welcome-header .left .style-module--ContentWrapper {
+    text-shadow: 0px 0px 6px #CDE3F8;
+  }
+
   div.welcome-header .left:after {
     position: absolute;
     content: "";
