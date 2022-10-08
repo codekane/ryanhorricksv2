@@ -1,15 +1,7 @@
 import React from "react";
-import {
-  AboutSection,
-  ArticlesSection,
-  ContactSection,
-  HeroSection,
-  InterestsSection,
-  Page,
-  ProjectsSection,
-  Seo,
-} from "gatsby-theme-portfolio-minimal";
-import "../styles/homepage.css";
+import { Page, Seo } from "gatsby-theme-portfolio-minimal";
+import BigHeadLayout from "./big-head-layout";
+//import "../styles/homepage.css";
 
 function HomepageText(props) {
   return(
@@ -17,10 +9,7 @@ function HomepageText(props) {
       <p>If you’ve come here, then you’re interested in me, for some reason. Perhaps you’re considering me for a job, or you’re a follower who took an interest. </p>
       <p>Whatever the reason, I’m glad that you came. 
         You’re in for an adventure.</p>
-      {/*<p>Besides code, I like to climb rocks, go to shows, play guitar, and I’m learning how to write for an audience.</p>*/}
-
     </div>
-
   )
 }
 
@@ -99,29 +88,16 @@ function Socials(props) {
             </clipPath>
           </defs>
         </svg>
-
-
       </a>
-
-
     </div>
-
   )
 }
-
-function Hello(props) {
+export default function IndexPage() {
   return (
     <>
-      <div className="welcome-header">
-        <div className="left">
-          <a className="homepage-link" href="/" aria-label="home" aria-current="page">
-            <div class="style-module--ContentWrapper --XYxH4">
-              Ryan Horricks
-            </div>
-          </a>
-          <img src={"/profile.jpg"} />
-        </div>
-        <div className="right">
+      <Seo title="Ryan Horricks" />
+      <Page>
+        <BigHeadLayout>
           <div className="intro-container">
             <div className="welcome-message">
               <h1>Welcome!</h1>
@@ -129,50 +105,7 @@ function Hello(props) {
             <Socials />
           </div>
           <HomepageText />
-        </div>
-      </div>
-    </>
-
-  )
-}
-
-export function LeftSideHero() {
-  return (
-    <div className="left">
-      <a className="homepage-link" href="/" aria-label="home" aria-current="page">
-        <div class="style-module--ContentWrapper --XYxH4">
-          Ryan Horricks
-        </div>
-      </a>
-      <img src={"/profile.jpg"} />
-    </div>
-  )
-}
-
-export default function IndexPage() {
-  return (
-    <>
-      <Seo title="Ryan Horricks" />
-      <Page>
-        <div className="welcome-header">
-          <LeftSideHero />
-          <div className="right">
-            <div className="intro-container">
-              <div className="welcome-message">
-                <h1>Welcome!</h1>
-              </div>
-              <Socials />
-            </div>
-            <HomepageText />
-          </div>
-        </div>
-        {/*
-        <HeroSection sectionId="hero" />
-        <ArticlesSection sectionId="articles" heading="Latest Articles" sources={['Medium']} />
-        <AboutSection sectionId="about" heading="About Portfolio Minimal" />
-        <InterestsSection sectionId="details" heading="Details" />
-        <ContactSection sectionId="github" heading="Issues?" />
-        */}
+        </BigHeadLayout>
       </Page>
     </>
   );

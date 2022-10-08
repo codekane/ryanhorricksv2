@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby"
 import { Page, Seo } from "gatsby-theme-portfolio-minimal";
-import "../styles/homepage.css";
+//import "../styles/homepage.css";
 import "../styles/portfolio.css";
-import { LeftSideHero } from "./index";
+import BigHeadLayout from "./big-head-layout";
 
 
 function Project(props) {
@@ -61,34 +61,32 @@ export default function PortfolioPage( { data } ) {
   let default_year = Math.max(...getYearsFromProjects(projects));
   const [selectedYear, setSelectedYear] = useState(default_year);
   const changeYear = (year) => { year = parseInt(year.target.innerText); setSelectedYear(year); }
+  console.log(data);
 
-    return(
+  return(
     <>
       <Seo title="Ryan Horricks -- Portfolio" />
       <Page>
-        <div className="welcome-header">
-          <LeftSideHero />
-          <div className="right">
-            <div className="intro-container">
-              <div className="welcome-message">
-                <h1>Portfolio</h1>
-              </div>
+        <BigHeadLayout>
+          <div className="intro-container">
+            <div className="welcome-message">
+              <h1>Portfolio</h1>
             </div>
-            <YearFilter projects={projects} changeYear={changeYear} currentYear={selectedYear}/>
-
-            {projects.map((item, index) => {
-              let date = new Date(projects[index].frontmatter.date);
-              let year = date.getFullYear();
-
-              if (year == selectedYear) {
-                return <Project key = {index} project={projects[index].frontmatter} />
-              }
-            }
-            )}
-
-
           </div>
-        </div>
+          <YearFilter projects={projects} changeYear={changeYear} currentYear={selectedYear}/>
+
+          {projects.map((item, index) => {
+            let date = new Date(projects[index].frontmatter.date);
+            let year = date.getFullYear();
+
+            if (year == selectedYear) {
+              return <Project key = {index} project={projects[index].frontmatter} />
+            }
+          }
+          )}
+
+        </BigHeadLayout>
+
       </Page>
     </>  )
 }

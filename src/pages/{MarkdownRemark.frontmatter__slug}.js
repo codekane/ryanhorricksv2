@@ -5,6 +5,7 @@ import "../styles/homepage.css";
 import "../styles/portfolio.css";
 import { LeftSideHero } from "./index";
 import ImageGallery from 'react-image-gallery';
+import NiceWideLayout from './nice-wide-layout';
 
 export default function Template({ data }) {
   const { markdownRemark } = data;
@@ -15,19 +16,15 @@ export default function Template({ data }) {
     <>
       <Seo title="Ryan Horricks -- Portfolio" />
       <Page>
-        <div className="welcome-header">
-          <LeftSideHero />
-          <div className="right">
-            <div className="intro-container">
-              <div className="welcome-message">
-                <h1>{data.markdownRemark.frontmatter.title}</h1>
-              </div>
-              {data.markdownRemark.frontmatter.images.length > 0 &&
-                <ImageGallery items={data.markdownRemark.frontmatter.images} />
-              }
-            </div>
-          </div>
-        </div>
+        <NiceWideLayout>
+          <h1>{data.markdownRemark.frontmatter.title}</h1>
+          {data.markdownRemark.frontmatter.images.length > 0 &&
+            <ImageGallery items={data.markdownRemark.frontmatter.images} />
+          }
+
+
+          <div className="portfolio-item-content" dangerouslySetInnerHTML={{ __html: html }} />
+        </NiceWideLayout>
       </Page>
     </>
   )
