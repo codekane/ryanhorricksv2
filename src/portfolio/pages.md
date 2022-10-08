@@ -1,6 +1,6 @@
 ---
 slug: "/portfolio/pages"
-date: "2020-01-01"
+date: "2019-12-26"
 title: "Pages"
 excerpt: ""
 thumbnail: ""

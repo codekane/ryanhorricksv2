@@ -1,0 +1,17 @@
+.portfolio-year-filter {
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  margin-top: 6px;
+}
+
+.portfolio-year-filter span {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.portfolio-year-filter span.current-year {
+  transform: scale(1.4);
+}
