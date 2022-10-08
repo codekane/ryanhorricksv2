@@ -6,6 +6,9 @@ excerpt: "A Kanban Board. Built in React wiith an emphasis on emulating the full
 range of features available on the physical version of the same."
 thumbnail: "./thumbnails/dashboard.png"
 type: "project"
+stack:
+  - "React"
+  - "Redux"
 images: []
 published: true
 live_url: ""

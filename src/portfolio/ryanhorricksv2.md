@@ -5,6 +5,10 @@ title: "Ryan Horricks v2"
 excerpt: "This site, unless you’re a time traveller. Built using the Gatsby framework, gatsby-theme-portfolio, and a lot of design time."
 thumbnail: "./thumbnails/ryanhorricksv2.png"
 type: "project"
+stack:
+  - "React"
+  - "Gatsby"
+  - "CSS"
 images:
    - original: "/Portfolio Images/ryanhorricksv2-home.png"
      thumbnail: "/Portfolio Images/ryanhorricksv2-home.png"

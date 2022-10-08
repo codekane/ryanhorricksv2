@@ -5,6 +5,9 @@ title: "Pages"
 excerpt: ""
 thumbnail: ""
 type: "project"
+stack:
+  - "CSS"
+  - "Liquid"
 images: []
 published: true
 live_url: ""

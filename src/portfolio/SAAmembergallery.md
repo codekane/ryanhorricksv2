@@ -5,6 +5,8 @@ title: "SAA Member Gallery"
 excerpt: ""
 thumbnail: ""
 type: "project"
+stack:
+  - "Wordpress"
 images: []
 published: true
 live_url: ""

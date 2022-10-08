@@ -5,6 +5,9 @@ title: "SAA - Pivot Point"
 excerpt: "Enacted during a spring lockdown to help raise money for the Sculptors Association of Alberta."
 thumbnail: "./thumbnails/pivotpoint.png"
 type: "project"
+stack:
+  - "Wordpress"
+  - "CSS"
 images: []
 published: true
 live_url: ""

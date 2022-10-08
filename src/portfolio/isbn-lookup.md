@@ -5,6 +5,8 @@ title: "ISBN Lookup"
 excerpt: "Frustrated with inaction by the site owners, I built a browser extension to automatically add some scripts of our own"
 thumbnail: "./thumbnails/isbnlookup.png"
 type: "project"
+stack:
+  - "React"
 images: []
 published: true
 live_url: ""

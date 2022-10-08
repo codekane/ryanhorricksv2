@@ -7,6 +7,14 @@ import BigHeadLayout from "./big-head-layout";
 
 
 function Project(props) {
+  const stackList = () => {
+    if (props.project.stack) {
+      return props.project.stack;
+    }
+    else return [];
+  }
+
+  console.log(stackList());
   return(
     <>
       <a href={props.project.slug}>
@@ -14,8 +22,13 @@ function Project(props) {
           <div className="slide-image-container">
             <img src={props.project.thumbnail} />
           </div>
-          <div className="slide-text">
-            <span className="slide-title">{props.project.title}</span>
+          <div className="slide-content">
+            <div className="slide-header">
+              <span className="slide-title">{props.project.title}</span>
+              <div className="slide-stack">
+                {stackList().map(tech => <span>{tech}</span>)}
+              </div>
+            </div>
             <span className="slide-date">{props.project.date}</span>
             <span className="slide-excerpt">{props.project.excerpt}</span>
           </div>
@@ -98,6 +111,7 @@ export const pageQuery = graphql`
           nodes {
             frontmatter {
               title
+              stack
               thumbnail
               slug
               excerpt

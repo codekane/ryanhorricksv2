@@ -6,6 +6,8 @@ excerpt: "A line of notebooks and pocketbooks that I ruthly iterated on, seeking
 something sort of perfect. I'd like to think I succeeded."
 thumbnail: "./thumbnails/dontpanic.png"
 type: "project"
+stack:
+  - "Shopify"
 images: []
 published: true
 live_url: ""

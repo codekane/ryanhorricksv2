@@ -6,6 +6,10 @@ excerpt: "Being an impatient soul, I decided to take a shortcut to hit my career
 trajectory, and wouldn't you know it, it damned near worked!"
 thumbnail: "./thumbnails/shortcut.png"
 type: "project"
+stack:
+  - "Ruby"
+  - "CSS"
+  - "Sinatra"
 images: []
 published: true
 live_url: ""

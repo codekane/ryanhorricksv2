@@ -5,6 +5,10 @@ title: "Advision E-Commerce"
 excerpt: "A collection of work I've done while doing Front-End Development with this company."
 thumbnail: ""
 type: "project"
+stack:
+  - "CSS"
+  - "JavaScript"
+  - "jQuery"
 images:
    - original: "/Portfolio Images/opti-mized-live-usage.png"
      thumbnail: "/Portfolio Images/opti-mized-live-usage.png"

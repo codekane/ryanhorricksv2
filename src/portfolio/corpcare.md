@@ -5,6 +5,10 @@ title: "CorpCare"
 excerpt: "Designed in Figma, built in Webflow, and a public example of work otherwise behind an N.D.A."
 thumbnail: "./thumbnails/corpcare.png"
 type: "project"
+stack:
+  - "Webflow"
+  - "CSS"
+  - "JavaScript"
 images: []
 published: true
 live_url: ""

@@ -5,6 +5,11 @@ title: "Opti-Mized.com"
 excerpt: "Work using the Python/Django/Angular stack to improve and iterate upon the Dashboard to launch the M.V.P."
 thumbnail: "/Portfolio Images/opti-mized-logo.png"
 type: "project"
+stack:
+  - "Python"
+  - "Django"
+  - "Angular"
+
 images:
    - original: "/Portfolio Images/opti-mized-live-usage.png"
      thumbnail: "/Portfolio Images/opti-mized-live-usage.png"

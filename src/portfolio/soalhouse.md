@@ -7,6 +7,10 @@ JAMstack , Jekyll hosted on Netlify using Netlify CMS, and a few other
 integrations."
 thumbnail: "./thumbnails/penile_parachute.png"
 type: "project"
+stack:
+  - "JAMStack"
+  - "CSS"
+  - "Liquid"
 images: []
 published: true
 live_url: ""

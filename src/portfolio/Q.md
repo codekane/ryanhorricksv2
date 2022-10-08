@@ -5,6 +5,9 @@ title: "Q"
 excerpt: "A Communal Youtube Queue"
 thumbnail: ""
 type: "project"
+stack:
+  - "Ruby"
+  - "JavaScript"
 images: []
 published: true
 live_url: ""

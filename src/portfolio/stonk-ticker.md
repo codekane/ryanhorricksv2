@@ -5,6 +5,10 @@ title: "Stonk Ticker"
 excerpt: "There's a story here."
 thumbnail: "./thumbnails/stockticker.png"
 type: "project"
+stack:
+  - "Ruby"
+  - "React"
+  - "Python"
 images: []
 published: true
 live_url: ""

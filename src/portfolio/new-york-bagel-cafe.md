@@ -5,6 +5,9 @@ title: "New York Bagel Cafe"
 excerpt: "I worked three days here as a dishwasher, and trying my hand (badly) at making beautiful food. Failing that, I figured I'd offer them a website."
 thumbnail: "./thumbnails/new-york-bagel-cafe.svg"
 type: "project"
+stack:
+  - "CSS"
+  - "Liquid"
 images: []
 published: true
 live_url: ""
