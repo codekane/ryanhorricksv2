@@ -2,7 +2,7 @@
 slug: "/portfolio/isbn-lookup"
 date: "2020-11-30"
 title: "ISBN Lookup"
-excerpt: "Frustrated with inaction by the site owners, I built a browser extension to automatically add some scripts of our own"
+excerpt: "I was experimenting with a library feature on a prior version of the site, and I built this to give me a quick lookup for information on a book baed upon its ISBN."
 thumbnail: "./thumbnails/isbnlookup.png"
 type: "project"
 stack:

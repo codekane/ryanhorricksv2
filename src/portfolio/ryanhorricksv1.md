@@ -3,7 +3,7 @@ slug: "/portfolio/ryanhorricksv1"
 date: "2020-11-30"
 title: "Ryan Horricks v1"
 excerpt: ""
-thumbnail: ""
+thumbnail: "/thumbnails/ryanhorricksv1.png"
 type: "project"
 stack:
   - "Wordpress"

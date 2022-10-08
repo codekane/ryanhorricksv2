@@ -26,6 +26,10 @@
 
 /* Project Slide Section */
 
+@media (prefers-color-scheme: dark) {
+  color: #ddd;
+}
+
 .project-slide {
   width: 602px;
   /*height: 174px; */
@@ -34,8 +38,11 @@
   margin-bottom: 12px;
   /*box-shadow: 0px 4px 4px #CDE3F8; */
   display: flex;
-  /*color: black; */
-  color: #ddd;
+  color: black;
+  align-items: center;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 5px 5px 5px 5px;
+
 }
 
 .slide-header {
@@ -45,13 +52,15 @@
 
 .slide-stack span {
   padding: 0px 5px;
+  font-size: 0.85rem;
 }
 
 .slide-content {
   display: flex;
   flex-direction: column;
-  margin-left: 24px;
+  margin-left: 16px;
   margin-top: 16px;
+  margin-bottom: 16px;
   width: 100%;
 }
 
@@ -74,12 +83,57 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  padding-left: 11px;
 }
 
 .slide-image-container img {
   max-width: 100%;
+  max-height: 100%;
   height: auto;
 }
 
+.portfolio-head .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.portfolio-head .bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-head .bottom button {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  border-radius: var(--border-radius);
+  border: 0.125rem solid var(--primary-color);
+  background: #cde3f8;
+  padding: 0.5rem 1.5rem;
+}
+
+.story-pointer {
+  flex-direction: column;
+}
 
 
+.portfolio-pointer, .story-pointer {
+  cursor: default;
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+}
+.portfolio-pointer:hover, .story-pointer:hover {
+  transform: scale(1.2);
+  transition: transform 0.25s;
+}
+
+.portfolio-pointer, .story-pointer div {
+  cursor: pointer;
+}
+
+div.bottom button {
+  cursor: pointer;
+}

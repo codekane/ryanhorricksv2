@@ -2,8 +2,8 @@
 slug: "/portfolio/advision"
 date: "2022-08-22"
 title: "Advision E-Commerce"
-excerpt: "A collection of work I've done while doing Front-End Development with this company."
-thumbnail: ""
+excerpt: "A collection of front-end work done for clients of Advision E-Commerce."
+thumbnail: "/thumbnails/advision_logo.png"
 type: "project"
 stack:
   - "CSS"

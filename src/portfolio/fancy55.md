@@ -1,5 +1,5 @@
 ---
-slug: "/portfolio/Fancy 55"
+slug: "/portfolio/Fancy55"
 date: "2019-03-01"
 title: "Fancy55"
 excerpt: "So there's this logo, right, and this logo is animated with

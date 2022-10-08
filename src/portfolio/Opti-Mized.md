@@ -2,7 +2,7 @@
 slug: "/portfolio/opti-mized"
 date: "2022-09-22"
 title: "Opti-Mized.com"
-excerpt: "Work using the Python/Django/Angular stack to improve and iterate upon the Dashboard to launch the M.V.P."
+excerpt: "Another day, another dollar, another early-stage startup trying to change the world."
 thumbnail: "/Portfolio Images/opti-mized-logo.png"
 type: "project"
 stack:

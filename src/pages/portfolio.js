@@ -54,7 +54,6 @@ function getYearsFromProjects(projects) {
 
 function YearFilter(props) {
   let years = getYearsFromProjects(props.projects);
-  console.log(props);
   return(
     <div className="portfolio-year-filter">
       {years.map((item, index) => {
@@ -74,7 +73,7 @@ export default function PortfolioPage( { data } ) {
   let default_year = Math.max(...getYearsFromProjects(projects));
   const [selectedYear, setSelectedYear] = useState(default_year);
   const changeYear = (year) => { year = parseInt(year.target.innerText); setSelectedYear(year); }
-  console.log(data);
+  console.log(projects);
 
   return(
     <>

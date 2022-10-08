@@ -21,4 +21,7 @@ live_url: ""
 github_url: ""
 ---
 
-## Output this to HTML please
+## This is what happens when you actually take the time, to make something good.
+My last portfolio was not good... It served it's purpose, which was to check a box, however it wasn't nice to 
+look at, it wasn't nice to use, and it wasn't something I was proud of. It was hard to justify working on it to
+myself, really. Why does it matter?
