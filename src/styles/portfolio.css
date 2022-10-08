@@ -1,3 +1,6 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+
 .portfolio-year-filter {
   max-width: 350px;
   margin: 0 auto;
@@ -15,3 +18,8 @@
 .portfolio-year-filter span.current-year {
   transform: scale(1.4);
 }
+
+.intro-container {
+  width: 100%;
+}
+

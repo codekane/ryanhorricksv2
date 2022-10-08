@@ -1,15 +1,6 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby"
-import {
-  AboutSection,
-  ArticlesSection,
-  ContactSection,
-  HeroSection,
-  InterestsSection,
-  Page,
-  ProjectsSection,
-  Seo,
-} from "gatsby-theme-portfolio-minimal";
+import { Page, Seo } from "gatsby-theme-portfolio-minimal";
 import "../styles/homepage.css";
 import "../styles/portfolio.css";
 import { LeftSideHero } from "./index";
