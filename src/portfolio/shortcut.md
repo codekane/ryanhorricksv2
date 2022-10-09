@@ -4,7 +4,7 @@ date: "2018-10-01"
 title: "Shortcut"
 excerpt: "Being an impatient soul, I decided to take a shortcut to hit my career
 trajectory, and wouldn't you know it, it damned near worked!"
-thumbnail: "./thumbnails/shortcut.png"
+thumbnail: "/thumbnails/shortcut.png"
 type: "project"
 stack:
   - "Ruby"

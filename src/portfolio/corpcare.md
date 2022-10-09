@@ -3,7 +3,7 @@ slug: "/portfolio/corpcare"
 date: "2022-04-04"
 title: "CorpCare"
 excerpt: "Website for CorpCare, another product of the SAAS startup I used to work for."
-thumbnail: "./thumbnails/corpcare.png"
+thumbnail: "/thumbnails/corpcare.png"
 type: "project"
 stack:
   - "Webflow"
