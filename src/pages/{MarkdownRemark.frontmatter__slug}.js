@@ -37,9 +37,10 @@ export default function Template({ data }) {
             </div>
           </div>
 
-          {data.markdownRemark.frontmatter.images.length > 0 &&
-          <ImageGallery items={data.markdownRemark.frontmatter.images} slideDuration={0} />
-          }
+          { data.markdownRemark.frontmatter.images && data.markdownRemark.frontmatter.images.length > 0 &&
+            <ImageGallery items={data.markdownRemark.frontmatter.images} slideDuration={0} />
+            }
+          
 
 
           <div className="portfolio-item-content" dangerouslySetInnerHTML={{ __html: html }} />

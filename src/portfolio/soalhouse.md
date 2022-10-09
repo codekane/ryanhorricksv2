@@ -11,7 +11,7 @@ stack:
   - "JAMStack"
   - "CSS"
   - "Liquid"
-images: 
+images:
   - original: "/Portfolio Images/soalhouse-home.png"
     thumbnail: "/Portfolio Images/soalhouse-home.png"
     alt: "Homepage for soalhouse.ca"
