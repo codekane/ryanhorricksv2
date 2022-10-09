@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "gatsby": "^4.18.2",
+    "gatsby-remark-use-frontmatter-path": "^1.0.0",
     "gatsby-source-filesystem": "^4.22.0",
     "gatsby-theme-portfolio-minimal": "latest",
     "gatsby-transformer-remark": "^5.22.0",
