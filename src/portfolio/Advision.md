@@ -6,8 +6,8 @@ excerpt: "A collection of front-end work done for clients of Advision E-Commerce
 thumbnail: "/thumbnails/advision_logo.png"
 type: "project"
 stack:
+  - "Lightspeed"
   - "CSS"
-  - "JavaScript"
   - "jQuery"
 images:
    - original: "/Portfolio Images/opti-mized-live-usage.png"

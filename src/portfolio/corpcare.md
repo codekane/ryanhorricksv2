@@ -2,7 +2,7 @@
 slug: "/portfolio/corpcare"
 date: "2022-04-04"
 title: "CorpCare"
-excerpt: "Designed in Figma, built in Webflow, and a public example of work otherwise behind an N.D.A."
+excerpt: "Website for CorpCare, another product of the SAAS startup I used to work for."
 thumbnail: "./thumbnails/corpcare.png"
 type: "project"
 stack:

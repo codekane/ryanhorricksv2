@@ -2,17 +2,35 @@
 slug: "/portfolio/instacaretech"
 date: "2022-05-05"
 title: "InstaCareTech"
-excerpt: "Everything I did for their actual application is behind an NDA, however this website is public, and I made it."
-thumbnail: "./thumbnails/instacare.png"
+excerpt: "Website for InstaCare, flagship product of a SAAS startup I used to work for."
+thumbnail: "./thumbnails/instacare_thumb.png"
 type: "project"
 stack:
   - "Figma"
   - "Webflow"
-images: []
+images:
+  - original: "/Portfolio Images/instacaretech-home.png"
+    thumbnail: "/Portfolio Images/instacaretech-home.png"
+    alt: "Home page of instacaretech.com"
+  - original: "/Portfolio Images/instacaretech-solutions.png"
+    thumbnail: "/Portfolio Images/instacaretech-solutions.png"
+    alt: "Solutions page on instacaretech.com"
+  - original: "/Portfolio Images/instacaretech-comparison.png"
+    thumbnail: "/Portfolio Images/instacaretech-comparison.png"
+    alt: "Comparison page on instacaretech.com"
+  - original: "/Portfolio Images/instacaretech-blog-listing.png"
+    thumbnail: "/Portfolio Images/instacaretech-blog-listing.png"
+    alt: "A listing of blog posts on instacaretech.com"
+  - original: "/Portfolio Images/instacaretech-blog-post.png"
+    thumbnail: "/Portfolio Images/instacaretech-blog-post.png"
+    alt: "A blog post on instacaretech.com"
+  - original: "/Portfolio Images/instacaretech-pricing.png"
+    thumbnail: "/Portfolio Images/instacaretech-pricing.png"
+    alt: "Pricing page on instacaretech.com"
+  - original: "/Portfolio Images/instacaretech-contact.png"
+    thumbnail: "/Portfolio Images/instacaretech-contact.png"
+    alt: "Contact page on instacaretech.com"
 published: true
-live_url: ""
+live_url: "https://www.instacaretech.com/"
 github_url: ""
 ---
-
-This story is sealed until June 06, 2024, but I made this website, and you're
-allowed to see that.

@@ -21,14 +21,14 @@ export default function Template({ data }) {
             <div className="top">
               <Link to="/portfolio">
                 <div className="portfolio-pointer">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"><path d="m8 18-8-8 8-8 1.417 1.417L2.833 10l6.584 6.583Z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="nocturnal-icon" height="20" width="20"><path d="m8 18-8-8 8-8 1.417 1.417L2.833 10l6.584 6.583Z"/></svg>
                   Portfolio
                 </div>
               </Link>
               <h1>{data.markdownRemark.frontmatter.title}</h1>
               <div className="story-pointer">
                 <div>Story</div>
-                <svg xmlns='http://www.w3.org/2000/svg' height='20' width='20'><path d='m10 13.062-5-5L6.062 7 10 10.938 13.938 7 15 8.062Z'/></svg>
+                <svg xmlns='http://www.w3.org/2000/svg' className="nocturnal-icon" height='20' width='20'><path d='m10 13.062-5-5L6.062 7 10 10.938 13.938 7 15 8.062Z'/></svg>
               </div>
             </div>
             <div className="bottom">

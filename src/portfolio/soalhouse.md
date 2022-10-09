@@ -5,16 +5,37 @@ title: "SOAL House"
 excerpt: "My first venture into the world of online art sales. Built using the
 JAMstack , Jekyll hosted on Netlify using Netlify CMS, and a few other
 integrations."
-thumbnail: "./thumbnails/penile_parachute.png"
+thumbnail: "./thumbnails/soalhouse_thumb.png"
 type: "project"
 stack:
   - "JAMStack"
   - "CSS"
   - "Liquid"
-images: []
+images: 
+  - original: "/Portfolio Images/soalhouse-home.png"
+    thumbnail: "/Portfolio Images/soalhouse-home.png"
+    alt: "Homepage for soalhouse.ca"
+  - original: "/Portfolio Images/soalhouse-art-listing.png"
+    thumbnail: "/Portfolio Images/soalhouse-art-listing.png"
+    alt: "Details page for a piece of artwork on soalhouse.ca"
+  - original: "/Portfolio Images/soalhouse-artists.png"
+    thumbnail: "/Portfolio Images/soalhouse-artists.png"
+    alt: "Artists page for artisans showcasing works on soalhouse.ca"
+  - original: "/Portfolio Images/soalhouse-artisan-profile.png"
+    thumbnail: "/Portfolio Images/soalhouse-artisan-profile.png"
+    alt: "Artisan profile on soalhouse.ca"
+  - original: "/Portfolio Images/soalhouse-accomodations.png"
+    thumbnail: "/Portfolio Images/soalhouse-accomodations.png"
+    alt: "Accomodations page for booking a room at the SOAL House on soalhouse.ca"
+  - original: "/Portfolio Images/soalhouse-about.png"
+    thumbnail: "/Portfolio Images/soalhouse-about.png"
+    alt: "About the SOAL House, on soalhouse.ca"
+  - original: "/Portfolio Images/soalhouse-admin.png"
+    thumbnail: "/Portfolio Images/soalhouse-admin.png"
+    alt: "Login screen for the Admin page on soalhouse.ca"
 published: true
-live_url: ""
-github_url: ""
+live_url: "https://www.soalhouse.ca"
+github_url: "https://github.com/codekane/soalhouse"
 ---
 
 This is another whole chapter in my life. I moved into the SOAL House on

@@ -26,9 +26,7 @@
 
 /* Project Slide Section */
 
-@media (prefers-color-scheme: dark) {
-  color: #ddd;
-}
+
 
 .project-slide {
   width: 602px;
@@ -43,6 +41,21 @@
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   padding: 5px 5px 5px 5px;
 
+}
+
+div.project-slide::after {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.9);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+div.project-slide:hover {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.9);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+div.project-slide:hover::after {
+  opacity: 1;
 }
 
 .slide-header {
@@ -136,4 +149,34 @@
 
 div.bottom button {
   cursor: pointer;
+}
+
+.nocturnal-icon {
+  fill: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  div.project-slide {
+    color: #ddd;
+    box-shadow: 0 3px 10px rgb(255 255 255 / 0.2);
+  }
+  div.project-slide:hover {
+    box-shadow: 0 9px 30px rgb(255 255 255 / 0.9);
+  }
+  div.project-slide::after {
+    box-shadow: 0 9px 30px rgb(255 255 255 /0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  div.project-slide:hover::after {
+    opacity: 1;
+  }
+
+  .portfolio-pointer {
+    color: white;
+  }
+
+  .nocturnal-icon {
+    fill: white;
+  }
 }
