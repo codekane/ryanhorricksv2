@@ -10,11 +10,11 @@ stack:
   - "Gatsby"
   - "CSS"
 images:
-   - original: "/Portfolio Images/ryanhorricksv2-home.png"
-     thumbnail: "/Portfolio Images/ryanhorricksv2-home.png"
+   - original: "./Portfolio Images/ryanhorricksv2-home.png"
+     thumbnail: "./Portfolio Images/ryanhorricksv2-home.png"
      alt: "Alt Text"
-   - original: "/Portfolio Images/ryanhorricksv2-portfolio.png"
-     thumbnail: "/Portfolio Images/ryanhorricksv2-portfolio.png"
+   - original: "./Portfolio Images/ryanhorricksv2-portfolio.png"
+     thumbnail: "./Portfolio Images/ryanhorricksv2-portfolio.png"
      alt: "Alt Text"
 published: true
 live_url: ""
