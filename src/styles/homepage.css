@@ -157,6 +157,10 @@ footer .style-module--Logo--xzURL {
   display: none;
 }
 
+footer {
+  display: none;
+}
+
 header .style-module--Logo-xzURL {
   display: none;
 }
