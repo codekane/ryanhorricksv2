@@ -4,7 +4,7 @@ date: "2019-03-01"
 title: "Fancy55"
 excerpt: "So there's this logo, right, and this logo is animated with
 JavaScript, and it's also re-used throughout every page of the site..."
-thumbnail: "/thumbnails/fancy55.png"
+thumbnail: "./thumbnails/fancy55.png"
 type: "project"
 stack:
   - "Liquid"

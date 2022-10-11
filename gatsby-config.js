@@ -32,6 +32,19 @@ module.exports = {
         path: `${__dirname}/src/portfolio`
       },
     },
-    `gatsby-transformer-remark`
+    { resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/portfolio/Portfolio Images`,
+      },
+    },
+    { resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/portfolio/thumbnails`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };

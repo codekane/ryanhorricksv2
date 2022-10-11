@@ -4,7 +4,7 @@ date: "2021-08-31"
 title: "Dashboard"
 excerpt: "A Kanban Board. Built in React wiith an emphasis on emulating the full
 range of features available on the physical version of the same."
-thumbnail: "/thumbnails/dashboard.png"
+thumbnail: "./thumbnails/dashboard.png"
 type: "project"
 stack:
   - "React"

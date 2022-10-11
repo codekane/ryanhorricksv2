@@ -10,7 +10,7 @@ import { Link } from "gatsby";
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-  let images = markdownRemark.frontmatter.images
+//  let images = markdownRemark.frontmatter.images
   console.log(data.markdownRemark);
   return(
     <>
@@ -37,10 +37,9 @@ export default function Template({ data }) {
             </div>
           </div>
 
-          { data.markdownRemark.frontmatter.images && data.markdownRemark.frontmatter.images.length > 0 &&
+          {/* data.markdownRemark.frontmatter.images && data.markdownRemark.frontmatter.images.length > 0 &&
             <ImageGallery items={data.markdownRemark.frontmatter.images} slideDuration={0} />
-            }
-          
+            */}
 
 
           <div className="portfolio-item-content" dangerouslySetInnerHTML={{ __html: html }} />
@@ -60,13 +59,23 @@ export const pageQuery = graphql`
                   slug
                   title
                   images {
-                    original
-                    thumbnail
+                    original {
+                      childImageSharp {
+                        fluid(maxWidth: 2400) {
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
+                    }
+                    thumbnail {
+                      childImageSharp {
+                        fluid(maxWidth: 250) {
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
+                    }
                   }
                   published
                 }
               }
             }
-
-
             `

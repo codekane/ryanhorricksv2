@@ -15,12 +15,15 @@ function Project(props) {
   }
 
   console.log(stackList());
+  if (props.project.thumbnail) {
+    console.log(props.project.thumbnail.childImageSharp.fluid.src);
+  }
   return(
     <>
       <a href={props.project.slug}>
         <div className="project-slide">
           <div className="slide-image-container">
-            <img src={props.project.thumbnail} />
+            <img src={props.project.thumbnail && props.project.thumbnail.childImageSharp.fluid.src} />
           </div>
           <div className="slide-content">
             <div className="slide-header">
@@ -111,7 +114,13 @@ export const pageQuery = graphql`
             frontmatter {
               title
               stack
-              thumbnail
+              thumbnail {
+                childImageSharp {
+                  fluid(maxWidth: 250) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
               slug
               excerpt
               date
