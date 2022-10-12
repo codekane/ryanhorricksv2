@@ -5,7 +5,7 @@ title: "SOAL House"
 excerpt: "My first venture into the world of online art sales. Built using the
 JAMstack , Jekyll hosted on Netlify using Netlify CMS, and a few other
 integrations."
-thumbnail: "./thumbnails/soalhouse_thumb.png"
+thumbnail: "./thumbnails/soalhouse-logo.png"
 type: "project"
 stack:
   - "JAMStack"

@@ -3,7 +3,7 @@ slug: "/portfolio/pages"
 date: "2019-12-26"
 title: "Pages"
 excerpt: ""
-thumbnail: "./thumbnails/null.png"
+thumbnail: "./thumbnails/pages.png"
 type: "project"
 stack:
   - "CSS"

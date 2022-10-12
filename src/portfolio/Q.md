@@ -3,7 +3,7 @@ slug: "/portfolio/Q"
 date: "2020-09-11"
 title: "Q"
 excerpt: "A Communal Youtube Queue"
-thumbnail: "./thumbnails/null.png"
+thumbnail: "./thumbnails/null.jpg"
 type: "project"
 stack:
   - "Ruby"
