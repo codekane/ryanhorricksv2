@@ -29,6 +29,6 @@ images:
 
 
 published: true
-live_url: ""
+live_url: "https://opti-mized.com/"
 github_url: ""
 ---

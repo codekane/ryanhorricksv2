@@ -11,8 +11,8 @@ stack:
   - "jQuery"
 images: []
 published: true
-live_url: ""
-github_url: ""
+live_url: "https://fancy55.netlify.app/"
+github_url: "https://github.com/codekane/Fancy55"
 ---
 
 None of that actually happened, but there were a lot of ideas. Originally,
