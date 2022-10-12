@@ -157,13 +157,14 @@ footer .style-module--Logo--xzURL {
   display: none;
 }
 
-footer {
-  display: none;
+footer.style-module--Footer--pX98K {
+  display: none !important;
 }
 
 header .style-module--Logo-xzURL {
   display: none;
 }
+
 
 @media (prefers-color-scheme: dark) {
   /*
