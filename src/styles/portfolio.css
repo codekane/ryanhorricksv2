@@ -155,6 +155,24 @@ div.bottom button {
   fill: black;
 }
 
+.portfolio-head .top > * {
+  flex: 1;
+}
+
+.portfolio-head .top .portfolio-head-center {
+  flex-grow: 2;
+}
+
+.portfolio-head-left, .portfolio-head-right {
+  text-align: center;
+}
+
+.portfolio-head-right a {
+  color: black;
+}
+
+
+
 @media (prefers-color-scheme: dark) {
   div.project-slide {
     color: #ddd;
@@ -178,5 +196,9 @@ div.bottom button {
 
   .nocturnal-icon {
     fill: white;
+  }
+
+  .portfolio-head-right a {
+    color: #fafafa;
   }
 }
