@@ -9,10 +9,31 @@ type: "project"
 stack:
   - "React"
   - "Redux"
-images: []
+images:
+  - original: "./Portfolio Images/dashboard-default.png"
+    thumbnail: "./Portfolio Images/dashboard-default.png"
+    alt: "Default view of the Dashboard App"
+  - original: "./Portfolio Images/dashboard-complete.png"
+    thumbnail: "./Portfolio Images/dashboard-complete.png"
+    alt: "Completing a card using the Dashboard App"
+  - original: "./Portfolio Images/dashboard-discard.png"
+    thumbnail: "./Portfolio Images/dashboard-discard.png"
+    alt: "Discarding a card using the Dashboard App"
+  - original: "./Portfolio Images/dashboard-edit.png"
+    thumbnail: "./Portfolio Images/dashboard-edit.png"
+    alt: "Edit a card using the Dashboard App"
+  - original: "./Portfolio Images/dashboard-edit-view.png"
+    thumbnail: "./Portfolio Images/dashboard-edit-view.png"
+    alt: "View while editing a card using the Dashboard App"
+  - original: "./Portfolio Images/dashboard-create.png"
+    thumbnail: "./Portfolio Images/dashboard-create.png"
+    alt: "Add a new card using the Dashboard App"
+  - original: "./Portfolio Images/dashboard-finish.png"
+    thumbnail: "./Portfolio Images/dashboard-finish.png"
+    alt: "Final slide introducing the Dashboard App"
 published: true
-live_url: ""
-github_url: ""
+live_url: "https://codekane.github.io/Dashboard/"
+github_url: "https://github.com/codekane/Dashboard"
 ---
 
 Now, why I made this is a little bit funny, and a little bit sad. I had applied
