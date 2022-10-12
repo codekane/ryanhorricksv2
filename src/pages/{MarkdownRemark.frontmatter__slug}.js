@@ -36,7 +36,9 @@ export default function Template({ data }) {
     images = images.map(image => {
         return {
           original: image.original.childImageSharp.fluid.src,
-          thumbnail: image.thumbnail.childImageSharp.fluid.src
+          thumbnail: image.thumbnail.childImageSharp.fluid.src,
+          originalAlt: image.alt,
+          thumbnailAlt: image.alt
         }
     });
   } else { images = null; }
@@ -111,6 +113,7 @@ export const pageQuery = graphql`
                         }
                       }
                     }
+                    alt
                   }
                   published
                   github_url
