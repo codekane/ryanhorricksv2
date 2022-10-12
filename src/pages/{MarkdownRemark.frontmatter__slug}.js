@@ -10,8 +10,17 @@ import { Link } from "gatsby";
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-//  let images = markdownRemark.frontmatter.images
-  console.log(data.markdownRemark);
+  let images = markdownRemark.frontmatter.images
+
+  if (images.length > 0 ) {
+    images = images.map(image => {
+        return {
+          original: image.original.childImageSharp.fluid.src,
+          thumbnail: image.thumbnail.childImageSharp.fluid.src
+        }
+    });
+  } else { images = null; }
+
   return(
     <>
       <Seo title="Ryan Horricks -- Portfolio" />
@@ -37,9 +46,9 @@ export default function Template({ data }) {
             </div>
           </div>
 
-          {/* data.markdownRemark.frontmatter.images && data.markdownRemark.frontmatter.images.length > 0 &&
-            <ImageGallery items={data.markdownRemark.frontmatter.images} slideDuration={0} />
-            */}
+          { images  &&
+            <ImageGallery items={images} slideDuration={0} />
+            }
 
 
           <div className="portfolio-item-content" dangerouslySetInnerHTML={{ __html: html }} />
