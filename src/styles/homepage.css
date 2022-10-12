@@ -161,6 +161,10 @@ footer.style-module--Footer--pX98K {
   display: none !important;
 }
 
+footer {
+  display: none !important;
+}
+
 header .style-module--Logo-xzURL {
   display: none;
 }
