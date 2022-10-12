@@ -32,7 +32,7 @@ export default function Template({ data }) {
 
   console.log(frontmatter);
 
-  if (images.length > 0 ) {
+  if (images && images.length > 0 ) {
     images = images.map(image => {
         return {
           original: image.original.childImageSharp.fluid.src,
