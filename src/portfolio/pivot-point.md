@@ -8,7 +8,13 @@ type: "project"
 stack:
   - "Wordpress"
   - "CSS"
-images: []
+images:
+  - original: "./Portfolio Images/pivot-point-home.png"
+    thumbnail: "./Portfolio Images/pivot-point-home.png"
+    alt: "Home page of the Sculptors Association of Alberta during the Pivot Point Art Show and Sale"
+  - original: "./Portfolio Images/pivot-point-items.png"
+    thumbnail: "./Portfolio Images/pivot-point-items.png"
+    alt: "Storefront view during the Pivot Point Art Show and Sale"
 published: true
 live_url: ""
 github_url: ""
