@@ -171,6 +171,13 @@ div.bottom button {
   color: black;
 }
 
+.portfolio-head-center h1 {
+}
+
+.portfolio-head .top {
+  margin-bottom: 50px;
+}
+
 
 
 @media (prefers-color-scheme: dark) {

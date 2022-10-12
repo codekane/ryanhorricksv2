@@ -27,6 +27,10 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark;
   let images = markdownRemark.frontmatter.images
   let story = false;
+  let live_url = false;
+  let github_url = false;
+
+  console.log(frontmatter);
 
   if (images.length > 0 ) {
     images = images.map(image => {
@@ -37,9 +41,9 @@ export default function Template({ data }) {
     });
   } else { images = null; }
 
-  if (html.length > 0) {
-    story = true;
-  }
+  if (html.length > 0) { story = true; }
+  if (frontmatter.live_url && frontmatter.live_url.length > 0) { live_url = frontmatter.live_url; }
+  if (frontmatter.github_url && frontmatter.github_url.length > 0) { github_url = frontmatter.github_url; }
 
 
   return(
@@ -64,13 +68,13 @@ export default function Template({ data }) {
               </div>
 
               <div className="portfolio-head-right">
-                { story && <StoryPointer /> }
-                            </div>
+                { story && images && <StoryPointer /> }
+              </div>
 
             </div>
             <div className="bottom">
-              <button style={{backgroundColor: "#1e9144"}}>Live Link</button>
-              <button style={{backgroundColor: "#cd4b09"}}>GitHub</button>
+              { live_url && <a target="_blank" href={live_url}><button style={{backgroundColor: "#1e9144"}}>Live Link</button></a> }
+              { github_url && <a target="_blank" href={github_url}><button style={{backgroundColor: "#cd4b09"}}>GitHub</button></a> }
             </div>
           </div>
 
@@ -109,6 +113,8 @@ export const pageQuery = graphql`
                     }
                   }
                   published
+                  github_url
+                  live_url
                 }
               }
             }
