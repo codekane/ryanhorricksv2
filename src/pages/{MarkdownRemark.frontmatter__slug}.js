@@ -36,7 +36,11 @@ export default function Template({ data }) {
     images = images.map(image => {
         return {
           original: image.original.childImageSharp.fluid.src,
+          originalWidth: "1080px",
+          originalHeight: "550px",
           thumbnail: image.thumbnail.childImageSharp.fluid.src,
+          thumbnailWidth: "92.8px",
+          thumbnailHeight: "47.15px",
           originalAlt: image.alt,
           thumbnailAlt: image.alt
         }
