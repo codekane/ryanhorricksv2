@@ -1,5 +1,5 @@
 import React from 'react';
-import { COLOURS } from './src/constants';
+import { COLORS } from './src/constants';
 
 
 function setColorsByTheme() {
