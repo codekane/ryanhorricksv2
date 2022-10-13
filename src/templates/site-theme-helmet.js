@@ -10,7 +10,24 @@ export default function SiteThemeHelmet() {
     <Helmet>
       <style type="text/css">{`
       :root {
-
+        --primary-color: #000;
+        --secondary-color: #fff4d9;
+        --tertiary-color: #f2f2f2;
+        --text-color: #000;
+        --subtext-color: #555;
+        --background-color: #fff;
+        --card-background-color: #fff;
+        --scroll-bar-color: rgba(0, 0, 0, 0.5);
+        --box-shadow-color: rgba(0, 0, 0, 0.16);
+        --box-shadow-hover-color: rgba(0, 0, 0, 0.32);
+        --base-font: "Roboto", Arial, sans-serif
+        --code-block-bg: #f5f6f9;
+        --code-block-var: #da0078;
+        --code-block-num: #bf04b7;
+        --code-block-fun: #3d5afe;
+        --code-block-keyword: #fe4001;
+        --code-block-comment: #7f7f7f;
+        --code-block-tkimp: #fd971f;
       }
       @media (prefers-color-scheme: dark) {
         :root {
@@ -33,6 +50,10 @@ export default function SiteThemeHelmet() {
           --code-block-comment: #8292a2;
           --code-block-tkimp: #fd971f;
         }
+      }
+      body {
+        background-color: var(--background-color);
+        color: var(--text-color);
       }
       `}</style>
     </Helmet>
