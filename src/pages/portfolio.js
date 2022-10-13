@@ -28,9 +28,11 @@ function Project(props) {
           <div className="slide-content">
             <div className="slide-header">
               <span className="slide-title">{props.project.title}</span>
+              {/*
               <div className="slide-stack">
                 {stackList().map(tech => <span>{tech}</span>)}
               </div>
+              */}
             </div>
             <span className="slide-date">{props.project.date}</span>
             <span className="slide-excerpt">{props.project.excerpt}</span>
@@ -83,23 +85,29 @@ export default function PortfolioPage( { data } ) {
       <Seo title="Ryan Horricks -- Portfolio" />
       <Page>
         <BigHeadLayout>
-          <div className="intro-container">
-            <div className="welcome-message">
-              <h1>Portfolio</h1>
+          <div className="portfolio-list-content">
+            <div className="portfolio-top">
+              <div className="intro-container">
+                <div className="welcome-message">
+                  <h1>Portfolio</h1>
+                </div>
+              </div>
+              <YearFilter projects={projects} changeYear={changeYear} currentYear={selectedYear}/>
             </div>
+
+            <div className="projects-container">
+              {projects.map((item, index) => {
+                let date = new Date(projects[index].frontmatter.date);
+                let year = date.getFullYear();
+
+                if (year == selectedYear) {
+                  return <Project key = {index} project={projects[index].frontmatter} />
+                }
+              }
+              )}
+            </div>
+
           </div>
-          <YearFilter projects={projects} changeYear={changeYear} currentYear={selectedYear}/>
-
-          {projects.map((item, index) => {
-            let date = new Date(projects[index].frontmatter.date);
-            let year = date.getFullYear();
-
-            if (year == selectedYear) {
-              return <Project key = {index} project={projects[index].frontmatter} />
-            }
-          }
-          )}
-
         </BigHeadLayout>
 
       </Page>
@@ -109,7 +117,7 @@ export default function PortfolioPage( { data } ) {
 export const pageQuery = graphql`
       query {
         allMarkdownRemark(filter: {frontmatter: {type: {eq: "project"}, published: {ne: false}}}
-        sort: {fields: frontmatter___date, order: DESC}) {
+          sort: {fields: frontmatter___date, order: DESC}) {
           nodes {
             frontmatter {
               title
