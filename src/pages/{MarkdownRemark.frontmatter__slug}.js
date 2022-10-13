@@ -4,7 +4,7 @@ import { Page, Seo } from "gatsby-theme-portfolio-minimal";
 import "../styles/homepage.css";
 import "../styles/portfolio.css";
 import ImageGallery from 'react-image-gallery';
-import NiceWideLayout from './nice-wide-layout';
+import NiceWideLayout from '../templates/nice-wide-layout';
 import { Link } from "gatsby";
 
 

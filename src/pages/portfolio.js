@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { Page, Seo } from "gatsby-theme-portfolio-minimal";
 //import "../styles/homepage.css";
 import "../styles/portfolio.css";
-import BigHeadLayout from "./big-head-layout";
+import BigHeadLayout from "../templates/big-head-layout";
 
 
 function Project(props) {
