@@ -1,5 +1,72 @@
-const React = require("react");
+import React from 'react';
+import { COLOURS } from './src/constants';
 
+
+function setColorsByTheme() {
+  const processName = (name) => {
+    let found_capitals = [...name.matchAll(/[A-Z]/g)];
+
+    let working_fragment = "";
+    let output = "";
+    let working_index = 0;
+
+    found_capitals.forEach( (element, index, array) => {
+      if (index == 0 && index == array.length -1) {
+        output =  "--" + name.substring(working_index, element.index) + "-" + array[index][0].toLowerCase() + name.substring(element.index + 1);
+      }
+      else if (index == 0 && array.length > 1) {
+        let fragment = "--" + name.substring(working_index, element.index) + "-" + array[index][0].toLowerCase();
+        working_index = element.index + 1;
+        working_fragment = fragment;
+      } else if (index  > 0 &&  array.length -1 != index) {
+        let fragment = name.substring(working_index, element.index) + "-" + array[index][0].toLowerCase();
+        working_index = element.index + 1;
+        working_fragment = working_fragment + fragment;
+      } else if (index > 0 && array.length -1 == index) {
+        let fragment = name.substring(working_index, element.index) + "-" + array[index][0].toLowerCase();
+        working_index = element.index + 1;
+        fragment = fragment + name.substring(working_index);
+        output = working_fragment + fragment;
+      }
+    }
+    );
+    return output;
+  }
+
+  const colors = '🌈';
+  const mql = window.matchMedia('(prefers-color-scheme: dark)');
+  const prefersDarkFromMQ = mql.matches;
+
+  let colorMode = 'light';
+  if (prefersDarkFromMQ)
+    colorMode = 'dark';
+
+  let root = document.documentElement;
+
+  Object.entries(COLORS).forEach( ([name, colorByTheme]) => {
+    const cssVarName = processName(name);
+
+    if (prefersDarkFromMQ) {
+      root.style.setProperty(cssVarName, colorByTheme["dark"]);
+    } else { root.style.setProperty(cssVarName, colorByTheme["light"]); }
+  });
+}
+
+const MagicScriptTag = () => {
+  const boundFn = String(setColorsByTheme)
+    .replace("'🌈'", JSON.stringify(COLORS));
+
+  let calledFunction = `(${boundFn})()`;
+
+  //eslint-disable-next-line react/no-danger
+  return <script dangerouslySetInnerHTML={{ __html: calledFunction }} />;
+}
+
+export const onRenderBody = ({ setPreBodyComponents }) => {
+  setPreBodyComponents(<MagicScriptTag />);
+};
+
+/*
 exports.onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <style type="text/css">{`
@@ -52,3 +119,4 @@ exports.onRenderBody = ({ setHeadComponents }) => {
       `}</style>
       ]);
 };
+*/
