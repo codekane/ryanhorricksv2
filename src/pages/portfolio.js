@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby"
 import { Page, Seo } from "gatsby-theme-portfolio-minimal";
-//import "../styles/homepage.css";
 import "../styles/portfolio.css";
 import BigHeadLayout from "../templates/big-head-layout";
 
@@ -52,7 +51,9 @@ function getYearsFromProjects(projects) {
 }
 
 function YearFilter(props) {
-  let years = getYearsFromProjects(props.projects);
+  let projects = props.projects;
+
+  let years = getYearsFromProjects(projects);
   return(
     <div className="portfolio-year-filter">
       {years.map((item, index) => {
@@ -63,7 +64,6 @@ function YearFilter(props) {
         }
       }
       )}
-
     </div>
   )
 }
@@ -72,7 +72,6 @@ export default function PortfolioPage( { data } ) {
   let default_year = Math.max(...getYearsFromProjects(projects));
   const [selectedYear, setSelectedYear] = useState(default_year);
   const changeYear = (year) => { year = parseInt(year.target.innerText); setSelectedYear(year); }
-  console.log(projects);
 
   return(
     <>
