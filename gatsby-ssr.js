@@ -1,6 +1,5 @@
 import React from 'react';
-import { COLORS } from './src/constants';
-/*
+//import { COLORS } from './src/constants';
 const COLORS = {
   primaryColor: {
     light: "#000",
@@ -71,7 +70,6 @@ const COLORS = {
     dark: "#fd971f",
   }
 }
-*/
 
 function setColorsByTheme() {
   const processName = (name) => {
@@ -135,7 +133,7 @@ const MagicScriptTag = () => {
   return <script dangerouslySetInnerHTML={{ __html: calledFunction }} />;
 }
 
-export const onRenderBody = ({ setPreBodyComponents }) => {
+export const onRenderBody = ({ setPreBodyComponents, setHeadComponents }) => {
   setHeadComponents(<MagicScriptTag />);
 };
 
