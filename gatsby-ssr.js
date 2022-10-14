@@ -120,6 +120,8 @@ function setColorsByTheme() {
     if (prefersDarkFromMQ) {
       root.style.setProperty(cssVarName, colorByTheme["dark"]);
     } else { root.style.setProperty(cssVarName, colorByTheme["light"]); }
+    root.style.setProperty("background-color", "var(--background-color)");
+    root.style.setProperty("color", "var(--primary-color)");
   });
 }
 
