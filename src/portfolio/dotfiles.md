@@ -11,8 +11,7 @@ stack:
 images: []
 published: true
 github:
-  - url: "https://github.com/codekane/dots"
-    name:
+  - "https://github.com/codekane/dots"
 ---
 
 I'm going to need to write this one later... these early days are taxing to

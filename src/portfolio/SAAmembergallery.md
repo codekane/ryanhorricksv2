@@ -10,7 +10,5 @@ stack:
 images: []
 published: true
 live_url: "https://sculptors-alberta.com/members/"
-github:
-  - url:
-    name:
+github: []
 ---

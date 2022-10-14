@@ -28,4 +28,5 @@ images:
      alt: "Alt Text"
 published: true
 live_url: "https://opti-mized.com/"
+github: []
 ---

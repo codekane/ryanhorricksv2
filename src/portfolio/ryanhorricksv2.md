@@ -19,8 +19,7 @@ images:
 published: true
 live_url: "https://ryanhorricks.com"
 github:
-  - url: "https://github.com/codekane/ryanhorricksv2"
-    name:
+  - "https://github.com/codekane/ryanhorricksv2"
 ---
 
 ## This is what happens when you actually take the time, to make something good.

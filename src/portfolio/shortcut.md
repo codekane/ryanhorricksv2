@@ -14,8 +14,7 @@ images: []
 published: true
 live_url:
 github:
-  - url: "https://github.com/codekane/Shortcut"
-    name:
+  - "https://github.com/codekane/Shortcut"
 ---
 
 I'm going to need to write this one later... these early days are taxing to

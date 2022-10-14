@@ -11,6 +11,6 @@ stack:
   - "jQuery"
 images: []
 live_url:
-github:
+github: []
 published: true
 ---

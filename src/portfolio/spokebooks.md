@@ -10,9 +10,7 @@ stack:
   - "Shopify"
 images: []
 published: true
-github:
-  - url:
-    name:
+github: []
 live_url: ""
 ---
 

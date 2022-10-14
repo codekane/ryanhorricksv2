@@ -10,7 +10,5 @@ stack:
 images: []
 published: true
 live_url: "http://blog.ryanhorricks.com"
-github:
-  - url:
-    name:
+github: []
 ---

@@ -36,8 +36,7 @@ images:
 published: true
 live_url: "https://www.soalhouse.ca"
 github:
-  - url: "https://github.com/codekane/soalhouse"
-    name: 
+  - "https://github.com/codekane/soalhouse"
 ---
 
 This is another whole chapter in my life. I moved into the SOAL House on

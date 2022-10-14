@@ -11,7 +11,6 @@ images: []
 published: true
 live_url: ""
 github:
-  - url: "https://github.com/codekane/simple_scraper"
-    name:
+  - "https://github.com/codekane/simple_scraper"
 ---
 

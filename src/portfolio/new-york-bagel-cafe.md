@@ -12,6 +12,5 @@ images: []
 published: true
 github_url: "https://github.com/codekane/NewYorkBagelCafe"
 github:
-  - url: "https://github.com/codekane/NewYorkBagelCafe"
-    name:
+  - "https://github.com/codekane/NewYorkBagelCafe"
 ---

@@ -13,6 +13,5 @@ images:
     alt: "View from the admin panel of the Kageshi Browser Extension"
 published: true
 github:
-  - url: "https://github.com/codekane/kageshi"
-    name:
+  - "https://github.com/codekane/kageshi"
 ---

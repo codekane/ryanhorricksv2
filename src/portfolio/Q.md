@@ -15,6 +15,5 @@ images:
 published: true
 live_url: ""
 github:
-  - url: "https://github.com/codekane/Q"
-    name: 
+  - "https://github.com/codekane/Q"
 ---

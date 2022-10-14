@@ -11,6 +11,5 @@ stack:
 images: []
 published: true
 github:
-  - url: https://github.com/codekane/pages
-    name:
+  - "https://github.com/codekane/pages"
 ---

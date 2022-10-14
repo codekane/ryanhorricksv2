@@ -16,10 +16,8 @@ images:
 published: true
 live_url: ""
 github:
-  - url: "https://github.com/codekane/stonkk"
-    name: "Front-End"
-  - url: "https://github.com/codekane/stonk-rb"
-    name: "Back-End"
+  - "https://github.com/codekane/stonkk"
+  - "https://github.com/codekane/stonk-rb"
 ---
 Clearly, nothing is coming soon. I put all of my work into the left sidebar, and that would work,
 if I actually kept it hosted. Going deeper into the data required a greater amount of time and 

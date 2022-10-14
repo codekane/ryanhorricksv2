@@ -34,8 +34,7 @@ images:
 published: true
 live_url: "https://codekane.github.io/Dashboard/"
 github:
-  - url: "https://github.com/codekane/Dashboard"
-  - name: ""
+  - "https://github.com/codekane/Dashboard"
 ---
 
 Now, why I made this is a little bit funny, and a little bit sad. I had applied
