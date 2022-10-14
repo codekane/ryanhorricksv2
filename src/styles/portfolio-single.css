@@ -1,0 +1,64 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+
+/* Styles for the Portfolio Info Container Component */
+.portfolio-info {
+  border-bottom: 0.5px solid var(--subtext-color);
+  text-align: left;
+  margin-bottom: 32px;
+}
+.portfolio-info h1 {
+   font-size: 60px;
+  line-height: 66px;
+  margin-bottom: 20px;
+  margin-top: 4px;
+}
+
+.portfolio-info p {
+  max-width: 600px;
+}
+
+.portfolio-info .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  padding-bottom: 12px;
+}
+
+/* End styles for the Portfolio Info Container */
+
+/* Styles for the Live URL, Back, and Github Icons*/
+a.portfolio-icon {
+  padding: 12px;
+  padding-bottom: 0px;
+  margin-left: 16px;
+}
+a.portfolio-icon svg {
+  fill: var(--subtext-color);
+}
+/* End LiveURL Link and Icon */
+
+
+/* Styles for the portfolio Stack List */
+.stack-list {
+  font-size: 14px;
+  line-height: 20px;
+}
+.stack-list span {
+  margin-right: 8px;
+}
+/* End Portfolio Stack List Styles */
+
+/* Styles for the Image Gallery */
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+  max-height: 406px;
+  height: 406px;
+}
+
+.image-gallery-content.fullscreen .image-gallery-slide .image-gallery-image {
+  max-height: 90vh;
+  height: 90vh;
+}
+/* End Styles for Image Gallery */

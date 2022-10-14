@@ -2,38 +2,22 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Page, Seo } from "gatsby-theme-portfolio-minimal";
 import "../styles/homepage.css";
-import "../styles/portfolio.css";
+import "../styles/portfolio-single.css";
 import ImageGallery from 'react-image-gallery';
 import NiceWideLayout from '../templates/nice-wide-layout';
 import { Link } from "gatsby";
 
 
-function StoryPointer() {
-  return (
-    <a href="#portfolio-story">
-      <div className="story-pointer">
-        <div>Story</div>
-        <svg xmlns='http://www.w3.org/2000/svg' className="nocturnal-icon" height='20' width='20'><path d='m10 13.062-5-5L6.062 7 10 10.938 13.938 7 15 8.062Z'/></svg>
-      </div>
-    </a>
-
-  )
-}
-
 function PortfolioProjectLiveURL(props) {
   const live_url = props.url;
   const view_icon = `
-  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 lg:w-7 lg:h-7" height="24px" width="24px" viewBox="0 0 20 20" fill="currentColor">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 lg:w-7 lg:h-7" height="24px" width="24px" viewBox="0 0 20 20">
     <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
     <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path>
   </svg>`
   return(
     <>
-      {/*
-      {live_url &&
-      <div><span style={{fontWeight: 700}}>Live URL: </span><a href={live_url} target="_blank">{live_url}</a></div>}
-      */}
-      {live_url && <a href={live_url} target="_blank" dangerouslySetInnerHTML={{__html: view_icon}}/>}
+      {live_url && <a className="portfolio-icon" href={live_url} target="_blank" dangerouslySetInnerHTML={{__html: view_icon}}/>}
     </>
   )
 }
@@ -45,18 +29,6 @@ function PortfolioProjectStack(props) {
       {stack &&
       <div className="stack-list">
         {stack && stack.map( (element, index, array) => {
-          /*
-          console.log(`${element}, ${index}, ${array}`);
-          if (index == 0 && array.length == 1) {
-            return element;
-          } else if (index == 0 && array.length > 1) {
-            return `${element}, `;
-          } else if (index > 0 && index != array.length -1) {
-            return  element + ", ";
-          } else if (index > 0 && index == array.length -1) {
-            return element;
-          }
-          */
           return <span>{element}</span>
         })
         }</div>
@@ -73,12 +45,10 @@ function PortfolioProjectGithubLinks(props) {
     <>
       {Boolean(github) && github.map( (element, index, array) => {
         console.log(element);
-        return <a key={index} href={element.url} dangerouslySetInnerHTML={{__html: github_icon}}></a>
+        return <a className="portfolio-icon" key={index} href={element.url} dangerouslySetInnerHTML={{__html: github_icon}}></a>
       })
       }
-
     </>
-
   )
 }
 
@@ -88,23 +58,13 @@ function PortfolioProjectDate(props) {
   const month_int = date.getMonth();
   const month = (int) => {
     let dict = {
-      0: "January",
-      1: "February",
-      2: "March",
-      3: "April",
-      4: "May",
-      5: "June",
-      6: "July",
-      7: "August",
-      8: "September",
-      9: "October",
-      10: "November",
-      11: "December"
+      0: "January", 1: "February",  2: "March",
+      3: "April",   4: "May",       5: "June",
+      6: "July",    7: "August",    8: "September",
+      9: "October", 10: "November", 11: "December"
     }
     return dict[int];
   }
-  console.log(month(month_int));
-
   return(
     <>
       <span>{month(month_int)} {year}</span>
@@ -138,7 +98,7 @@ function PortfolioBackButton() {
   const icon_svg = `<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="m12 20-8-8 8-8 1.425 1.4-5.6 5.6H20v2H7.825l5.6 5.6Z"/></svg>`
 
   return(
-    <Link style={{fill: "var(--subtext-color)"}} to="/portfolio" dangerouslySetInnerHTML={{__html: icon_svg}}></Link>
+    <Link className="portfolio-icon" to="/portfolio" dangerouslySetInnerHTML={{__html: icon_svg}}></Link>
 
   )
 }
@@ -167,11 +127,9 @@ export default function Template({ data }) {
             <PortfolioProjectDate date={date}/>
             <h1>{data.markdownRemark.frontmatter.title}</h1>
             <p>{data.markdownRemark.frontmatter.excerpt}</p>
-            <div className="portfolio-info-bottom">
-              <div className="portfolio-info-left">
-                <PortfolioProjectStack stack={stack}/>
-              </div>
-              <div className="portfolio-info-right">
+            <div className="portfolio-info-bottom bottom">
+              <PortfolioProjectStack stack={stack}/>
+              <div>
                 <PortfolioBackButton/>
                 {live_url && <PortfolioProjectLiveURL url={live_url}/>}
                 <PortfolioProjectGithubLinks github={github} />
