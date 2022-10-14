@@ -10,7 +10,6 @@ import { Link } from "gatsby";
 
 function StoryPointer() {
   return (
-
     <a href="#portfolio-story">
       <div className="story-pointer">
         <div>Story</div>
@@ -19,72 +18,103 @@ function StoryPointer() {
     </a>
 
   )
+}
 
+function PortfolioProjectLiveURL(props) {
+  const live_url = props.url;
+  return(
+    <>
+      {live_url &&
+      <div><span style={{fontWeight: 700}}>Live URL: </span><a href={live_url} target="_blank">{live_url}</a></div>}
+    </>
+  )
+}
+
+function PortfolioProjectStack(props) {
+  const stack = props.stack;
+  return(
+    <>
+      {stack &&
+      <div>
+        <span style={{fontWeight: 700}}>Stack: </span>
+        {stack && stack.map( (element, index, array) => {
+          console.log(`${element}, ${index}, ${array}`);
+          if (index == 0 && array.length == 1) {
+            return element;
+          } else if (index == 0 && array.length > 1) {
+            return `${element}, `;
+          } else if (index > 0 && index != array.length -1) {
+            return  element + ", ";
+          } else if (index > 0 && index == array.length -1) {
+            return element;
+          }
+        })
+        }</div>
+      }
+    </>
+  )
+}
+
+function PortfolioProjectImageGallery(props) {
+  const images = props.images;
+  const processedImages = images.map(image => {
+    return {
+      original: image.original.childImageSharp.fluid.src,
+      originalWidth: "1920px",
+      originalHeight: "975px",
+      thumbnail: image.thumbnail.childImageSharp.fluid.src,
+      thumbnailWidth: "92.8px",
+      thumbnailHeight: "47.15px",
+      originalAlt: image.alt,
+      thumbnailAlt: image.alt
+    }
+  });
+
+  return(
+    <>
+      {processedImages && <ImageGallery items={processedImages} slideDuration={0} />}
+    </>
+  )
 }
 
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-  let images = markdownRemark.frontmatter.images
+  const stack = data.markdownRemark.frontmatter.stack;
+  const live_url = data.markdownRemark.frontmatter.live_url;
+  const images = data.markdownRemark.frontmatter.images;
+
   let story = false;
-  let live_url = false;
+  //let live_url = false;
   let github_url = false;
 
-  console.log(frontmatter);
-
-  if (images && images.length > 0 ) {
-    images = images.map(image => {
-        return {
-          original: image.original.childImageSharp.fluid.src,
-          originalWidth: "1080px",
-          originalHeight: "550px",
-          thumbnail: image.thumbnail.childImageSharp.fluid.src,
-          thumbnailWidth: "92.8px",
-          thumbnailHeight: "47.15px",
-          originalAlt: image.alt,
-          thumbnailAlt: image.alt
-        }
-    });
-  } else { images = null; }
-
   if (html.length > 0) { story = true; }
-  if (frontmatter.live_url && frontmatter.live_url.length > 0) { live_url = frontmatter.live_url; }
-  if (frontmatter.github_url && frontmatter.github_url.length > 0) { github_url = frontmatter.github_url; }
 
+  //if (frontmatter.live_url && frontmatter.live_url.length > 0) { live_url = frontmatter.live_url; }
+  if (frontmatter.github_url && frontmatter.github_url.length > 0) { github_url = frontmatter.github_url; }
 
   return(
     <>
       <Seo title="Ryan Horricks -- Portfolio" />
       <Page>
         <NiceWideLayout>
-          <div className="portfolio-head">
-            <div className="top">
-
-              <div className="portfolio-head-left">
-                <Link to="/portfolio">
-                  <div className="portfolio-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="nocturnal-icon" height="20" width="20"><path d="m8 18-8-8 8-8 1.417 1.417L2.833 10l6.584 6.583Z"/></svg>
-                    Portfolio
-                  </div>
-                </Link>
+          <div className="portfolio-info">
+            <div className="portfolio-info-top">
+              <div className="portfolio-context-row">
+                <Link to="/portfolio">Back to Portfolio</Link>
+                <span>September 2022</span>
               </div>
-
-              <div className="portfolio-head-center">
-                <h1>{data.markdownRemark.frontmatter.title}</h1>
-              </div>
-
-              <div className="portfolio-head-right">
-                { story && images && <StoryPointer /> }
-              </div>
-
+              <h1>{data.markdownRemark.frontmatter.title}</h1>
+              <p>{data.markdownRemark.frontmatter.excerpt}</p>
             </div>
-            <div className="bottom">
-              { live_url && <a target="_blank" href={live_url}><button style={{backgroundColor: "#1e9144"}}>Live Link</button></a> }
-              { github_url && <a target="_blank" href={github_url}><button style={{backgroundColor: "#cd4b09"}}>GitHub</button></a> }
+            <div className="portfolio-info-bottom">
+              <PortfolioProjectStack stack={stack}/>
+              <PortfolioProjectLiveURL url={live_url}/>
             </div>
+
           </div>
 
-          { images  && <ImageGallery items={images} slideDuration={0} /> }
+          <PortfolioProjectImageGallery images={images} />
 
           <div id="portfolio-story" className="portfolio-item-content" dangerouslySetInnerHTML={{ __html: html }} />
         </NiceWideLayout>
@@ -94,35 +124,37 @@ export default function Template({ data }) {
 }
 
 export const pageQuery = graphql`
-            query($id: String!) {
-              markdownRemark(id: { eq: $id }) {
-                html
-                id
-                frontmatter {
-                  date(formatString: "MMMM DD, YYYY")
-                  slug
-                  title
-                  images {
-                    original {
-                      childImageSharp {
-                        fluid(maxWidth: 1080) {
-                          ...GatsbyImageSharpFluid
+                query($id: String!) {
+                  markdownRemark(id: { eq: $id }) {
+                    html
+                    id
+                    frontmatter {
+                      date(formatString: "MMMM DD, YYYY")
+                      slug
+                      title
+                      images {
+                        original {
+                          childImageSharp {
+                            fluid(maxWidth: 2160) {
+                              ...GatsbyImageSharpFluid
+                            }
+                          }
                         }
-                      }
-                    }
-                    thumbnail {
-                      childImageSharp {
-                        fluid(maxWidth: 250) {
-                          ...GatsbyImageSharpFluid
+                        thumbnail {
+                          childImageSharp {
+                            fluid(maxWidth: 250) {
+                              ...GatsbyImageSharpFluid
+                            }
+                          }
                         }
+                        alt
                       }
+                      published
+                      github_url
+                      live_url
+                      stack
+                      excerpt
                     }
-                    alt
                   }
-                  published
-                  github_url
-                  live_url
                 }
-              }
-            }
-            `
+                `

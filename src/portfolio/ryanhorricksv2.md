@@ -6,9 +6,9 @@ excerpt: "This site, unless you’re a time traveller. Built using the Gatsby fr
 thumbnail: "./thumbnails/ryanhorricksv2.png"
 type: "project"
 stack:
-  - "React"
   - "Gatsby"
-  - "CSS"
+  - "React"
+  - "Netlify"
 images:
    - original: "./Portfolio Images/ryanhorricksv2-home.png"
      thumbnail: "./Portfolio Images/ryanhorricksv2-home.png"
