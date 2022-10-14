@@ -22,19 +22,13 @@ function Project(props) {
     <>
       <a href={props.project.slug}>
         <div className="project-slide">
-          <div className="slide-image-container">
+          <div className="image-container">
             <img src={props.project.thumbnail && props.project.thumbnail.childImageSharp.fluid.src} />
           </div>
-          <div className="slide-content">
-            <div className="slide-header">
-              <span className="slide-title">{props.project.title}</span>
-              {/*
-              <div className="slide-stack">
-                {stackList().map(tech => <span>{tech}</span>)}
-              </div>
-              */}
+          <div className="content">
+            <div className="header">
+              <span className="title">{props.project.title}</span>
             </div>
-            <span className="slide-date">{props.project.date}</span>
             <span className="slide-excerpt">{props.project.excerpt}</span>
           </div>
 

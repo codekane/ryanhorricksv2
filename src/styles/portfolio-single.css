@@ -29,6 +29,7 @@
 /* End styles for the Portfolio Info Container */
 
 /* Styles for the Live URL, Back, and Github Icons*/
+
 a.portfolio-icon {
   padding: 12px;
   padding-bottom: 0px;
@@ -37,6 +38,7 @@ a.portfolio-icon {
 a.portfolio-icon svg {
   fill: var(--subtext-color);
 }
+
 /* End LiveURL Link and Icon */
 
 
