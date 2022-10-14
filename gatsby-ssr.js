@@ -136,7 +136,7 @@ const MagicScriptTag = () => {
 }
 
 export const onRenderBody = ({ setPreBodyComponents }) => {
-  setPreBodyComponents(<MagicScriptTag />);
+  setHeadComponents(<MagicScriptTag />);
 };
 
 /*
