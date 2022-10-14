@@ -10,6 +10,7 @@ stack:
   - "Liquid"
 images: []
 published: true
-live_url: ""
-github_url: ""
+github:
+  - url: https://github.com/codekane/pages
+    name:
 ---

@@ -9,6 +9,8 @@ stack:
   - "Wordpress"
 images: []
 published: true
-live_url: ""
-github_url: ""
+live_url: "http://blog.ryanhorricks.com"
+github:
+  - url:
+    name:
 ---

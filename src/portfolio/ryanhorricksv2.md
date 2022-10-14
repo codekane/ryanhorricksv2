@@ -17,8 +17,10 @@ images:
      thumbnail: "./Portfolio Images/ryanhorricksv2-portfolio.png"
      alt: "Alt Text"
 published: true
-github_url: "https://github.com/codekane/ryanhorricksv2"
 live_url: "https://ryanhorricks.com"
+github:
+  - url: "https://github.com/codekane/ryanhorricksv2"
+    name:
 ---
 
 ## This is what happens when you actually take the time, to make something good.

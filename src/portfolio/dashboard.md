@@ -33,7 +33,9 @@ images:
     alt: "Final slide introducing the Dashboard App"
 published: true
 live_url: "https://codekane.github.io/Dashboard/"
-github_url: "https://github.com/codekane/Dashboard"
+github:
+  - url: "https://github.com/codekane/Dashboard"
+  - name: ""
 ---
 
 Now, why I made this is a little bit funny, and a little bit sad. I had applied

@@ -12,6 +12,7 @@ images:
     thumbnail: "./Portfolio Images/kageshit.png"
     alt: "View from the admin panel of the Kageshi Browser Extension"
 published: true
-live_url: ""
-github_url: "https://github.com/codekane/kageshi"
+github:
+  - url: "https://github.com/codekane/kageshi"
+    name:
 ---

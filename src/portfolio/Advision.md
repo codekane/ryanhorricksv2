@@ -10,7 +10,7 @@ stack:
   - "CSS"
   - "jQuery"
 images: []
+live_url:
+github:
 published: true
-live_url: ""
-github_url: ""
 ---

@@ -10,6 +10,8 @@ stack:
   - "Liquid"
 images: []
 published: true
-live_url: ""
-github_url: ""
+github_url: "https://github.com/codekane/NewYorkBagelCafe"
+github:
+  - url: "https://github.com/codekane/NewYorkBagelCafe"
+    name:
 ---

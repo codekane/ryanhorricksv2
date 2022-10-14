@@ -32,5 +32,7 @@ images:
     alt: "Contact page on instacaretech.com"
 published: true
 live_url: "https://www.instacaretech.com/"
-github_url: ""
+github:
+  - url: ""
+    name: ""
 ---

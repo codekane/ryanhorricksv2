@@ -11,7 +11,8 @@ stack:
   - "Websockets"
 images: []
 published: true
-live_url: ""
-github_url: ""
+github:
+  - name:
+    url:
 ---
 

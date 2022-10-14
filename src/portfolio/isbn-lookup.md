@@ -15,6 +15,8 @@ images:
     thumbnail: "./Portfolio Images/isbn-lookup-found.png"
     alt: "API results from the  ISBN Lookup App"
 published: true
-live_url: ""
-github_url: ""
+github:
+  - url:
+    name:
+live_url:
 ---

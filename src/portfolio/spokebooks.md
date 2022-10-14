@@ -10,8 +10,10 @@ stack:
   - "Shopify"
 images: []
 published: true
+github:
+  - url:
+    name:
 live_url: ""
-github_url: ""
 ---
 
 The question to build the perfect notebook.

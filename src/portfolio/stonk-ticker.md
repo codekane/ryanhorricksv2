@@ -15,7 +15,11 @@ images:
     alt: "Ancient view from the Stonk Ticker App"
 published: true
 live_url: ""
-github_url: ""
+github:
+  - url: "https://github.com/codekane/stonkk"
+    name: "Front-End"
+  - url: "https://github.com/codekane/stonk-rb"
+    name: "Back-End"
 ---
 Clearly, nothing is coming soon. I put all of my work into the left sidebar, and that would work,
 if I actually kept it hosted. Going deeper into the data required a greater amount of time and 

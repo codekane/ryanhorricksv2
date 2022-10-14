@@ -16,6 +16,8 @@ images:
     thumbnail: "./Portfolio Images/pivot-point-items.png"
     alt: "Storefront view during the Pivot Point Art Show and Sale"
 published: true
-live_url: ""
-github_url: ""
+live_url: "https://sculptors-alberta.com/art-sale/"
+github:
+  - url:
+    name:
 ---

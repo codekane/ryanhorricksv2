@@ -26,9 +26,6 @@ images:
    - original: "./Portfolio Images/opti-mized-recover-password2.png"
      thumbnail: "./Portfolio Images/opti-mized-recover-password2.png"
      alt: "Alt Text"
-
-
 published: true
 live_url: "https://opti-mized.com/"
-github_url: ""
 ---

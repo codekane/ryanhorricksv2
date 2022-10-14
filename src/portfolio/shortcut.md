@@ -12,8 +12,10 @@ stack:
   - "Sinatra"
 images: []
 published: true
-live_url: ""
-github_url: ""
+live_url:
+github:
+  - url: "https://github.com/codekane/Shortcut"
+    name:
 ---
 
 I'm going to need to write this one later... these early days are taxing to

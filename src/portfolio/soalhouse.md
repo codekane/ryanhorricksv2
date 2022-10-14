@@ -35,7 +35,9 @@ images:
     alt: "Login screen for the Admin page on soalhouse.ca"
 published: true
 live_url: "https://www.soalhouse.ca"
-github_url: "https://github.com/codekane/soalhouse"
+github:
+  - url: "https://github.com/codekane/soalhouse"
+    name: 
 ---
 
 This is another whole chapter in my life. I moved into the SOAL House on

@@ -39,5 +39,5 @@ images:
 
 published: true
 live_url: "https://bwsunriseinnhotel.com/"
-github_url: ""
+github:
 ---

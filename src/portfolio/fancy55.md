@@ -12,7 +12,9 @@ stack:
 images: []
 published: true
 live_url: "https://fancy55.netlify.app/"
-github_url: "https://github.com/codekane/Fancy55"
+github:
+  - url: "https://github.com/codekane/Fancy55"
+    name: ""
 ---
 
 None of that actually happened, but there were a lot of ideas. Originally,

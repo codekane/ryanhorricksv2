@@ -14,5 +14,7 @@ images:
     alt: "Inspiration for the Youtube Queue app."
 published: true
 live_url: ""
-github_url: "https://github.com/codekane/Q"
+github:
+  - url: "https://github.com/codekane/Q"
+    name: 
 ---
