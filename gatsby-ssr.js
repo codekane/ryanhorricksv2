@@ -1,5 +1,6 @@
 import React from 'react';
-//import { COLORS } from './src/constants';
+import { COLORS } from './src/constants';
+/*
 const COLORS = {
   primaryColor: {
     light: "#000",
@@ -70,6 +71,7 @@ const COLORS = {
     dark: "#fd971f",
   }
 }
+*/
 
 function setColorsByTheme() {
   const processName = (name) => {
@@ -112,7 +114,7 @@ function setColorsByTheme() {
 
   let root = document.documentElement;
 
-  Object.entries(COLORS).forEach( ([name, colorByTheme]) => {
+  Object.entries(colors).forEach( ([name, colorByTheme]) => {
     const cssVarName = processName(name);
 
     if (prefersDarkFromMQ) {
