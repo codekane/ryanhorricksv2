@@ -10,3 +10,7 @@
   font-size: 3rem;
   line-height: 3rem;
 }
+
+header .style-module--Logo--xzURL {
+  display: inherit;
+}
