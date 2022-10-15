@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby"
 import { Page, Seo } from "gatsby-theme-portfolio-minimal";
-import "../styles/portfolio.css";
 import BigHeadLayout from "../templates/big-head-layout";
+import "../styles/portfolio.css";
 
 
 function Project(props) {
@@ -55,7 +55,7 @@ function YearFilter(props) {
 
   let years = getYearsFromProjects(projects);
   return(
-    <div className="portfolio-year-filter">
+    <div className="big-head-bar portfolio-year-filter">
       {years.map((item, index) => {
         if (props.currentYear == years[index]) {
           return <span key={index} className="current-year" onClick={event => props.changeYear(event, years[index])}>{years[index]}</span>
@@ -79,7 +79,7 @@ export default function PortfolioPage( { data } ) {
       <Page>
         <BigHeadLayout>
           <div className="portfolio-list-content">
-            <div className="portfolio-top">
+            <div className="big-head-intro">
               <div className="intro-container">
                 <div className="welcome-message">
                   <h1>Portfolio</h1>

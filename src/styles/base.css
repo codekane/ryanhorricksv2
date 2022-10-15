@@ -46,11 +46,7 @@ header .style-module--Logo--xzURL {
   }
 }
 
-@media only screen and (max-width: 800px) {
-  header .style-module--Logo--xzURL {
-    display: none;
-  }
-}
+
 
 /* End Header Styles */
 

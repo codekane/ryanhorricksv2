@@ -1,3 +1,12 @@
+/* Fix for header being fucky. TODO! */
+@media only screen and (max-width: 800px) {
+  header .style-module--Logo--xzURL {
+    display: none;
+  }
+}
+
+
+
 /* Intro Container // Welcome Message */
 .intro-container {
   display: flex;
@@ -15,36 +24,32 @@
 /* End Section */
 
 /* Top Level Layout Styles */
-.big-head-layout {
+div.big-head-layout {
   display: flex;
   max-width: var(--page-width);
   margin: 0 auto;
   margin-top: 100px;
+  --profile-width: 414px;
+  --profile-height: calc(var(--profile-width) * 1.333);
+  --profile-border-radius: 0 0 13px 13px;
 }
 
 @media only screen and (max-width: 1150px) {
-  .big-head-layout {
+  div.big-head-layout {
     padding-left: 20px;
     padding-right: 20px;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .big-head-layout {
-    display: flex;
-    flex-direction: column;
   }
 }
 
 
 /* Layout Font Styles */
 
-.big-head-layout h1 {
+div.big-head-layout h1 {
   font-size: 48px;
   line-height: 90px;
 }
 
-.big-head-layout p {
+div.big-head-layout p {
   font-size: 20px;
   font-family: avenir-next, sans-serif;
   font-weight: 100;
@@ -52,41 +57,40 @@
 }
 
 /* Styles for the big fucking head off to the left */
-.big-head-layout .left {
+div.big-head-layout .left {
   position: fixed;
   z-index: 2;
   margin-top: 100px;
 }
 
-.big-head-layout .left .style-module--ContentWrapper {
+div.big-head-layout .left .style-module--ContentWrapper {
   font-size: 2rem;
 }
 
 
-.big-head-layout .left img {
-  max-width: 414px;
-  border-radius: 414px;
+div.big-head-layout .left img {
+  width: var(--profile-width);
+  border-radius: var(--profile-border-radius);
   filter: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0) 100%);
   position: absolute;
   left: -80px;
   top: -300px;
 }
 
-
 @media (prefers-color-scheme:dark) {
- .big-head-layout .left:after {
+ div.big-head-layout .left:after {
   background:linear-gradient(180deg,rgba(0,0,0,.67),transparent);
-  border-radius:414px;
-  content:"";
-  height:552px;
-  left:-80px;
+  height: var(--profile-height);
+  width: var(--profile-width);
+  border-radius: var(--profile-border-radius);
   position:absolute;
   top:-300px;
-  width:414px
+  left:-80px;
+  content:"";
   }
 }
 
-.big-head-layout .left a.homepage-link {
+div.big-head-layout .left a.homepage-link {
  color:var(--primary-color);
  font-weight:900;
  letter-spacing:6px;
@@ -95,76 +99,203 @@
  z-index:100
 }
 
-@media only screen and (max-width: 840px) {
-  .big-head-layout .left {
-    min-width: 306px;
-  }
-  .big-head-layout .left img {
-    width: 370px;
-  }
-}
-@media (prefers-color-scheme: dark) and (max-width: 840px) {
-  .big-head-layout .left:after {
-    width: 370px;
-  }
-}
 
-@media only screen and (max-width: 359px) {
 
-  div.left img {
-    max-width: 324px;
-  }
-
-  .big-head-layout .left .style-module--ContentWrapper {
-    font-size: 1.5rem !important;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .big-head-layout .left {
-    position: absolute;
-  }
-}
-  /* Big Head Layout goes Right Here */
-
-.big-head-layout .right {
+div.big-head-layout .right {
   margin-left: 500px;
   margin-top: 30px;
   position: relative;
 }
 
+/* This styles the info bar right under the welcome message */
+div.big-head-bar {
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  margin-top: 6px;
+}
+
+
 @media only screen and (max-width: 1150px) {
-  .big-head-layout .right {
+  div.big-head-layout .right {
     margin-left: 400px;
     width: calc(100vw - 400px);
   }
 }
 
 @media only screen and (max-width: 1100px) {
-  .big-head-layout .right {
+  div.big-head-layout .right {
     margin-left: 350px;
     width: calc(100vw - 350px);
   }
 
 }
+
 @media only screen and (max-width: 840px) {
-  .big-head-layout .right {
+  div.big-head-layout .right {
     margin-left: 300px;
+    margin-left: calc(350px - (840px - 100vw));
     width: calc(100vw - 300px);
   }
-}
 
+  div.big-head-layout .left {
+    min-width: 306px;
+  }
+  div.big-head-layout {
+    --profile-width: 370px;
+  }
+
+}
 
 @media only screen and (max-width: 800px) {
-  .big-head-layout .right {
-    margin-left: 0px;
-    margin-top: 400px;
-    width: auto;
+  div.big-head-layout {
+    --profile-width: calc(100vw - 430px);
+    --profile-height: calc(var(--profile-width) * 1.333);
+  }
+
+  div.big-head-layout .left {
+    --profile-left-calc: calc(((800px - 100vw) * 0.75));
+    --profile-top-calc: calc((800px - 100vw) / 2);
+  }
+
+  div.big-head-layout .left::after, div.big-head-layout .left img {
+    min-width: 150px;
+    min-height: 200px;
+    height: var(--profile-height);
+    width: var(--profile-width);
+    left: calc(var(--profile-left-calc) - 80px);
+    top: calc(var(--profile-top-calc) - 300px);
+  }
+
+
+  div.big-head-layout .left::after {
+    border-radius: var(--profile-border-radius);
+  }
+  div.big-head-layout .left img {
+    position: relative;
+    }
+
+
+  div.big-head-layout .right {
+    --left-margin-figure: calc((800px - 100vw) /2);
+    /*margin-left: var(--profile-width));*/
+    margin-left: calc(310px - var(--left-margin-figure));
+    width: 100%;
+  }
+
+  div.big-head-bar {
+    margin-bottom: 120px;
+  }
+
+
+
+
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 750px) {
+  div.big-head-layout .left img, div.big-head-layout .left::after {
+    border-radius: 0 0 13px 0;
   }
 }
 
-@media only screen and (max-width: 410px) {
-  .big-head-layout .right {
-    margin-top: 300px;
+@media only screen and (max-width: 720px) {
+  div.big-head-layout .left img, div.big-head-layout .left::after {
+    left: -20px;
   }
 }
+
+
+@media only screen and (max-width: 664px) {
+  div.big-head-layout .left img, div.big-head-layout .left::after {
+    top: -232px;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 650px) {
+  div.big-head-intro {
+    position: fixed;
+    top: 160px;
+    background-color: var(--background-color);
+    margin-left: 0;
+    left: 0;
+    width: 100vw;
+  }
+
+  div.big-head-intro{
+    margin-left: var(--profile-width);
+    width: calc(100% - var(--profile-width));
+  }
+
+  div.big-head-bar {
+    margin-bottom: 0;
+    padding-bottom: 30px;
+  }
+  
+}
+
+
+
+
+
+@media only screen and (max-width: 580px) {
+  div.big-head-layout {
+    --profile-width: 150px;
+    --profile-height: 200px;
+  }
+
+  div.big-head-layout .right {
+    margin-left: 0;
+  }
+
+  div.big-head-intro {
+    margin-left: 0;
+    background-color: var(--background-color);
+    width: 100%;
+    margin-top: -60px;
+  }
+  .intro-container {
+    margin-left: var(--profile-width);
+    width: calc(100% - var(--profile-width));
+    margin-top: 16px;
+  }
+  div.big-head-bar {
+    margin-top: 16px;
+    margin-left: calc((100vw - 350px) / 2);
+  }
+
+  .projects-container {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  div.big-head-layout .right {
+    margin-left: 0;
+    width: 100%;
+  }
+
+}
+
+
+@media only screen and (max-width: 359px) {
+  div.left img {
+    max-width: 324px;
+  }
+
+  div.big-head-layout .left .style-module--ContentWrapper {
+    font-size: 1.5rem !important;
+  }
+}
+
 

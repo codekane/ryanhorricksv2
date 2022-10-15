@@ -1,13 +1,4 @@
 /* Year filter Component */
-.portfolio-year-filter {
-  max-width: 350px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 30px;
-  margin-top: 6px;
-}
-
 .portfolio-year-filter span {
   cursor: pointer;
   font-size: 1.2rem;
@@ -130,13 +121,6 @@ div.projects-container {
 
 
 @media only screen and (max-width: 800px) {
-
-  div.portfolio-top {
-    position: absolute;
-    top: -370px;
-    margin-left: 300px;
-    width: calc(100vw - 340px);
-  }
   div.projects-container {
     margin-top: -100px;
   }
@@ -148,16 +132,7 @@ div.projects-container {
 
 
 @media only screen and (max-width: 650px) {
-  div.portfolio-top {
-    position: inherit;
-    margin-left: 0;
-    margin-top: -100px;
-    width: auto;
-  }
-  div.projects-container {
-    margin-top: 0px;
+    div.projects-container {
+    margin-top: 160px;
   }
 }
-
-
-
