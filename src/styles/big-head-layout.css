@@ -1,3 +1,21 @@
+/* Intro Container // Welcome Message */
+.intro-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.welcome-message {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.welcome-message h1 {
+  margin-bottom: 0;
+}
+/* End Section */
+
+
+
 /* Everything to do with the welcome header */
 
 div.welcome-header h1 {

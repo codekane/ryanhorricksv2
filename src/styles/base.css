@@ -18,20 +18,6 @@
 }
 
 /* These styles are in use between the portfolio and index pages, at present, and should be included in both */
-.intro-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.welcome-message {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-}
-.welcome-message h1 {
-  margin-bottom: 0;
-}
-
 /* TODO:These styles concern the navbar header. The entire component should be re-implemented */
 .style-module--Header--mZOzg, .style-module--TopNavigationBar--V0syT {
   background-color: var(--navbar-color);
