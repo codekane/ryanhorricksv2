@@ -22,7 +22,7 @@ export default function BigHeadLayout({ children }) {
   return(
     <>
       <SiteThemeHelmet />
-      <div className="welcome-header">
+      <div className="big-head-layout">
         <div className="left">
           <a className="homepage-link" href="/" aria-label="home" aria-current="page">
             <div class="style-module--ContentWrapper --XYxH4">
