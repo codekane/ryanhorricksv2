@@ -159,5 +159,9 @@ div.projects-container {
   }
 }
 
-
+@media only screen and (max-width: 410px) {
+  div.portfolio-list-content {
+    margin-top: 65px;
+  }
+}
 

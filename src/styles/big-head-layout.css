@@ -105,14 +105,15 @@
 @media only screen and (max-width: 840px) {
   .big-head-layout .left {
     min-width: 306px;
+    width: 362px;
   }
   .big-head-layout .left img {
-    width: 370px;
+    width: 362px;
   }
 }
 @media (prefers-color-scheme: dark) and (max-width: 840px) {
   .big-head-layout .left:after {
-    width: 370px;
+    width: 362px;
   }
 }
 
@@ -171,7 +172,7 @@
 
 @media only screen and (max-width: 410px) {
   .big-head-layout .right {
-    margin-top: 400px;
+    margin-top: 300px;
   }
 }
 
