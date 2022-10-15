@@ -1,0 +1,153 @@
+/* Everything to do with the welcome header */
+
+div.welcome-header h1 {
+  font-size: 48px;
+  line-height: 90px;
+  /* height: 90px;*/
+}
+
+div.welcome-header p {
+  font-size: 20px;
+  font-family: avenir-next, sans-serif;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+}
+
+div.welcome-header .left {
+  /*max-width: 550px;*/
+  position: relative;
+  min-width: 350px;
+  position: fixed;
+}
+
+div.welcome-header {
+  /*min-height: 100vh;*/
+  display: flex;
+  max-width: 1044px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.left {
+  z-index: 2;
+}
+
+@media (prefers-color-scheme:dark) {
+ div.welcome-header .left:after {
+  background:linear-gradient(180deg,rgba(0,0,0,.67),transparent);
+  border-radius:414px;
+  content:"";
+  height:552px;
+  left:-80px;
+  position:absolute;
+  top:-300px;
+  width:414px
+  }
+}
+
+.welcome-header .left a.homepage-link {
+ color:var(--primary-color);
+ font-weight:900;
+ letter-spacing:6px;
+ position:fixed;
+ top:38px;
+ z-index:100
+}
+
+div.left {
+  margin-top: 100px;
+}
+
+div.left img {
+  max-width: 414px;
+  border-radius: 414px;
+  filter: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  left: -80px;
+  top: -300px;
+  /*background: linear-gradient(180deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0) 100%), url(/profile.jpg);*/
+}
+
+div.welcome-header .right {
+  margin-left: 500px;
+  margin-top: 30px;
+  position: relative;
+}
+
+@media only screen and (max-width: 1150px) {
+
+  div.welcome-header .right {
+    margin-left: 400px;
+    width: calc(100vw - 400px);
+  }
+
+  div.welcome-header {
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+}
+
+.welcome-header .left .style-module--ContentWrapper {
+  font-size: 2rem;
+}
+
+
+@media only screen and (max-width: 1100px) {
+  div.welcome-header .right {
+    margin-left: 350px;
+    width: calc(100vw - 350px);
+  }
+
+}
+@media only screen and (max-width: 840px) {
+  .welcome-header .left {
+    min-width: 306px;
+  }
+  .welcome-header .left img {
+    width: 370px;
+  }
+
+  div.welcome-header .right {
+    margin-left: 300px;
+    width: calc(100vw - 300px);
+  }
+
+  
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  .welcome-header {
+    display: flex;
+    flex-direction: column;
+  }
+  div.welcome-header .right {
+    margin-left: 0px;
+    margin-top: 400px;
+    width: auto;
+  }
+
+  div.welcome-header .left {
+    position: absolute;
+  }
+}
+
+
+@media only screen and (max-width: 410px) {
+  div.welcome-header .right {
+    margin-top: 300px;
+  }
+}
+
+@media only screen and (max-width: 359px) {
+
+  div.left img {
+    max-width: 324px;
+  }
+
+  .welcome-header .left .style-module--ContentWrapper {
+    font-size: 1.5rem !important;
+  }
+}

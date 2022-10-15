@@ -44,7 +44,6 @@ div.project-slide:hover {
 }
 
 .project-slide .content {
-  padding: 8px;
   margin-left: 16px;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -80,3 +79,85 @@ div.project-slide:hover {
 }
 
 /* End project slide section */
+
+/* Projects Container Section */
+div.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Misc. Unprocessed responsive media queries */
+
+@media only screen and (max-width: 990px) {
+  div.project-slide {
+    width: 552px;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  div.project-slide {
+    width: 502px;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  div.project-slide {
+    width: 452px;
+  }
+
+  .slide-header {
+    flex-direction: column;
+  }
+
+  .slide-header div.slide-stack span:first-child {
+    padding-left: 0px;
+  }
+
+  .slide-header div.slide-header span.slide-title {
+    margin-bottom: 4px;
+  }
+
+  .slide-header div.slide-stack {
+    margin-bottom: 4px;
+  }
+
+  div.slide-content span.slide-excerpt {
+    font-size: 14px;
+  }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+  div.portfolio-top {
+    position: absolute;
+    top: -370px;
+    margin-left: 300px;
+    width: calc(100vw - 340px);
+  }
+  div.projects-container {
+    margin-top: -100px;
+  }
+
+  div.project-slide {
+    width: auto;
+  }
+}
+
+
+@media only screen and (max-width: 650px) {
+  div.portfolio-top {
+    position: inherit;
+    margin-left: 0;
+    margin-top: -100px;
+    width: auto;
+  }
+  div.projects-container {
+    margin-top: 0px;
+  }
+}
+
+
+

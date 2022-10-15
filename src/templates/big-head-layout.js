@@ -1,7 +1,9 @@
 import React from "react";
 import { Page, Seo } from "gatsby-theme-portfolio-minimal";
 import SiteThemeHelmet from './site-theme-helmet';
+import "../styles/base.css";
 import "../styles/homepage.css";
+import "../styles/big-head-layout.css";
 
 export function LeftSideHero() {
   return (
