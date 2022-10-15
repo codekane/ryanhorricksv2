@@ -1,7 +1,7 @@
 import React from "react";
 import { Page, Seo } from "gatsby-theme-portfolio-minimal";
 import BigHeadLayout from "../templates/big-head-layout";
-//import "../styles/homepage.css";
+import "../styles/homepage.css";
 
 function HomepageText(props) {
   return(

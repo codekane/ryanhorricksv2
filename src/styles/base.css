@@ -1,6 +1,13 @@
 :root {
   --page-width: 1044px;
   --page-padding: 0;
+  --navbar-color: #CDE3F8;
+}
+
+@media (prefers-color-scheme: dark){
+  :root {
+    --navbar-color: #646F7A;
+  }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
@@ -10,23 +17,24 @@
   src: url("../fonts/AvenirNextLTPro-Regular.otf");
 }
 
-
-
-
-header  .style-module--ContentWrapper {
-  color: var(--primary-color);
+/* These styles are in use between the portfolio and index pages, at present, and should be included in both */
+.intro-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.welcome-message {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.welcome-message h1 {
+  margin-bottom: 0;
 }
 
-/* Ugly overwrites */
-header div.style-module--ContentWrapper --XYxH4 {
-  padding: 0;
-  max-width: 1044px;
-}
-
-
+/* TODO:These styles concern the navbar header. The entire component should be re-implemented */
 .style-module--Header--mZOzg, .style-module--TopNavigationBar--V0syT {
-  background-color: #CDE3F8;
-
+  background-color: var(--navbar-color);
 }
 
 header.style-module--Header--mZOzg {
@@ -44,37 +52,6 @@ header .style-module--Logo--xzURL {
   position: fixed;
 }
 
-footer .style-module--Logo--xzURL {
-  display: none;
-}
-
-footer.style-module--Footer--pX98K {
-  display: none !important;
-}
-
-footer {
-  display: none !important;
-}
-
-header .style-module--Logo-xzURL {
-  display: none;
-}
-
-
-
-@media (prefers-color-scheme: dark) {
-  .style-module--Header--mZOzg, .style-module--TopNavigationBar--V0syT {
-    background-color: #646F7A;
-  }
-
-  .style-module--Header--mZOzg {
-    position: fixed;
-  }
-
-
-}
-
-
 
 @media only screen and (max-width: 1150px) {
   .style-module--Header--mZOzg {
@@ -83,14 +60,32 @@ header .style-module--Logo-xzURL {
   }
 }
 
-
 @media only screen and (max-width: 800px) {
+  header .style-module--Logo--xzURL {
+    display: none;
+  }
+}
 
-header .style-module--Logo--xzURL {
+/* End Header Styles */
+
+/* This is all about killing the stupid footer */
+
+footer .style-module--Logo--xzURL {
   display: none;
 }
 
+footer.style-module--Footer--pX98K,
+footer .style-module--Logo--xzURL,
+footer {
+  display: none !important;
 }
+
+/* End Stupid Footer Styles */
+
+
+
+
+
 
 
 
