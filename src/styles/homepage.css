@@ -1,8 +1,4 @@
-.homepage-socials {
-  display: flex;
-  width: 255px;
-  justify-content: space-around;
-}
+
 .welcome-message {
   display: flex;
   justify-content: space-around;
@@ -19,12 +15,19 @@
   margin-top: 60px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .social-icon {
-    fill: #fafafa;
-  }
-}
 
 .welcome-message h1 {
  margin-bottom:0;
+}
+
+
+
+/* Social Icon Styles */
+.homepage-socials {
+  display: flex;
+  width: 255px;
+  justify-content: space-around;
+}
+.homepage-socials svg, .homepage-socials path {
+  fill: var(--primary-color);
 }
