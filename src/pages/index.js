@@ -103,7 +103,7 @@ function TelegramIcon36() {
 
 function Socials(props) {
   return(
-    <div className="big-head-bar homepage-socials">
+    <div className="homepage-socials">
       <a href="https://www.facebook.com/ryan.horricks/" target="__blank"><FacebookIcon36/></a>
       <a href="https://www.instagram.com/jesus_basically/" target="__blank"><InstagramIcon36/></a>
       <a href="https://www.linkedin.com/in/rhorricks" target="__blank"><LinkedinIcon36/></a>
@@ -118,11 +118,9 @@ export default function IndexPage() {
       <Seo title="Ryan Horricks" />
       <Page>
         <BigHeadLayout>
-          <div className="big-head-intro">
-            <div className="intro-container">
-              <div className="welcome-message">
-                <h1>Welcome!</h1>
-              </div>
+          <div className="intro-container">
+            <div className="welcome-message">
+              <h1>Welcome!</h1>
             </div>
             <Socials />
           </div>

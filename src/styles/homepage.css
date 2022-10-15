@@ -1,3 +1,7 @@
+.homepage-text {
+  margin-top: 60px;
+}
+
 /* Social Icon Styles */
 .homepage-socials {
   display: flex;
@@ -7,18 +11,3 @@
 .homepage-socials svg, .homepage-socials path {
   fill: var(--primary-color);
 }
-
-
-.homepage-text {
-  margin-top: 60px;
-}
-
-@media only screen and (max-width: 650px) {
-  .homepage-text {
-    margin-top: 150px;
-  }
-  .homepage-socials {
-    width: 350px;
-  }
-}
-
