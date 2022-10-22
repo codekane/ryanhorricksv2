@@ -1,79 +1,84 @@
-import React, { useState } from "react";
-import { graphql } from "gatsby"
-import { Page, Seo } from "gatsby-theme-portfolio-minimal";
-import "../styles/portfolio.css";
-import BigHeadLayout from "../templates/big-head-layout";
-
+import React, { useState } from 'react';
+import { graphql } from 'gatsby';
+import { Page, Seo } from 'gatsby-theme-portfolio-minimal';
+import '../styles/portfolio.css';
+import BigHeadLayout from '../templates/big-head-layout';
 
 function Project(props) {
-  const stackList = () => {
-    if (props.project.stack) {
-      return props.project.stack;
-    }
-    else return [];
-  }
+  const { project } = props;
+  const {
+    stack, slug, thumbnail, title, excerpt,
+  } = project;
 
-  console.log(stackList());
-  if (props.project.thumbnail) {
-    console.log(props.project.thumbnail.childImageSharp.fluid.src);
-  }
-  return(
-    <>
-      <a href={props.project.slug}>
-        <div className="project-slide">
-          <div className="image-container">
-            <img src={props.project.thumbnail && props.project.thumbnail.childImageSharp.fluid.src} />
-          </div>
-          <div className="content">
-            <div className="header">
-              <span className="title">{props.project.title}</span>
-            </div>
-            <span className="slide-excerpt">{props.project.excerpt}</span>
-          </div>
-
+  return (
+    <a href={slug}>
+      <div className="project-slide">
+        <div className="image-container">
+          <img src={thumbnail && thumbnail.childImageSharp.fluid.src} alt={title} />
         </div>
-      </a>
-    </>
-  )
+        <div className="content">
+          <div className="header">
+            <span className="title">{title}</span>
+          </div>
+          <span className="slide-excerpt">{excerpt}</span>
+        </div>
+      </div>
+    </a>
+  );
 }
 
 function getYearsFromProjects(projects) {
-  let years = [];
-  for (let i = 0; i < projects.length; i++) {
-    let date = new Date(projects[i].frontmatter.date);
-    let year = date.getFullYear();
-    if (!years.includes(year)) {
-      years.push(year);
-    }
-  }
-  years = years.sort(function(a, b) { return a - b; });
-  return years;
+  const years = () => {
+    projects.map((elem) => {
+      let date = new Date(elem.frontmatter.date);
+      let year = date.getFullYear();
+      if (!years.includes(year)) 
+        return year;
+  });
+  return (years.sort((a, b) => a - b));
 }
 
 function YearFilter(props) {
-  let projects = props.projects;
+  const { projects, changeYear, currentYear } = props;
+  const years = getYearsFromProjects(projects);
+  const outputYears = () => years.map((year) => {
+    if (currentYear === year) {
+      return (
+        <span
+          key={year.toString()}
+          className="current-year"
+          onClick={() => changeYear(year)}
+        >
+          {year}
+        </span>
+      );
+    }
+    return (
+      <span
+        key={year.toString()}
+        onClick={() => changeYear(year)}
+      >
+        {year}
+      </span>
+    );
+  });
 
-  let years = getYearsFromProjects(projects);
-  return(
+  return (
     <div className="portfolio-year-filter">
-      {years.map((item, index) => {
-        if (props.currentYear == years[index]) {
-          return <span key={index} className="current-year" onClick={event => props.changeYear(event, years[index])}>{years[index]}</span>
-        } else {
-          return <span key={index} onClick={event => props.changeYear(event, years[index])}>{years[index]}</span>
-        }
-      }
-      )}
+      {outputYears()}
     </div>
-  )
+  );
 }
-export default function PortfolioPage( { data } ) {
-  const projects = data.allMarkdownRemark.nodes;
-  let default_year = Math.max(...getYearsFromProjects(projects));
-  const [selectedYear, setSelectedYear] = useState(default_year);
-  const changeYear = (year) => { year = parseInt(year.target.innerText); setSelectedYear(year); }
 
-  return(
+function PortfolioPage({ data }) {
+  const projects = data.allMarkdownRemark.nodes;
+  const defaultYear = Math.max(...getYearsFromProjects(projects));
+  const [selectedYear, setSelectedYear] = useState(defaultYear);
+  const changeYear = (year) => {
+    setSelectedYear(parseInt(year.target.innerText, 10));
+  };
+
+  return (
     <>
       <Seo title="Ryan Horricks -- Portfolio" />
       <Page>
@@ -85,32 +90,31 @@ export default function PortfolioPage( { data } ) {
                   <h1>Portfolio</h1>
                 </div>
               </div>
-              <YearFilter projects={projects} changeYear={changeYear} currentYear={selectedYear}/>
+              <YearFilter projects={projects} changeYear={changeYear} currentYear={selectedYear} />
             </div>
 
             <div className="projects-container">
               {projects.map((item, index) => {
-                let date = new Date(projects[index].frontmatter.date);
-                let year = date.getFullYear();
+                const date = new Date(projects[index].frontmatter.date);
+                const year = date.getFullYear();
 
-                if (year == selectedYear) {
-                  return <Project key = {index} project={projects[index].frontmatter} />
-                }
-              }
-              )}
+                if (year === selectedYear) {
+                  return <Project key={item.toString()} project={projects[index].frontmatter} />;
+                } return false;
+              })}
             </div>
 
           </div>
         </BigHeadLayout>
-
       </Page>
-    </>  )
+    </>
+  );
 }
 
-export const pageQuery = graphql`
+const pageQuery = graphql`
       query {
         allMarkdownRemark(filter: {frontmatter: {type: {eq: "project"}, published: {ne: false}}}
-          sort: {fields: frontmatter___date, order: DESC}) {
+        sort: {fields: frontmatter___date, order: DESC}) {
           nodes {
             frontmatter {
               title
@@ -129,5 +133,4 @@ export const pageQuery = graphql`
           }
         }
       }
-
-      `
+      `;
