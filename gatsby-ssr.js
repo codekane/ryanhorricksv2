@@ -1,133 +1,130 @@
 import React from 'react';
-//import { COLORS } from './src/constants';
+// import { COLORS } from './src/constants';
 const COLORS = {
   primaryColor: {
-    light: "#000",
-    dark: "#fafafa",
+    light: '#000',
+    dark: '#fafafa',
   },
   secondaryColor: {
-    light: "#fff4d9",
-    dark: "#341677",
+    light: '#fff4d9',
+    dark: '#341677',
   },
   tertiaryColor: {
-    light: "#f2f2f2",
-    dark: "#252525",
+    light: '#f2f2f2',
+    dark: '#252525',
   },
   textColor: {
-    light: "#000",
-    dark: "rgba(255, 255, 255, 0.87)",
+    light: '#000',
+    dark: 'rgba(255, 255, 255, 0.87)',
   },
   subtextColor: {
-    light: "#555",
-    dark: "#aaaaaa",
+    light: '#555',
+    dark: '#aaaaaa',
   },
   backgroundColor: {
-    light: "#fff",
-    dark: "#121212",
+    light: '#fff',
+    dark: '#121212',
   },
   cardBackgroundColor: {
-    light: "#fff",
-    dark: "#1c1c1c",
+    light: '#fff',
+    dark: '#1c1c1c',
   },
   scrollBarColor: {
-    light: "rgba(0, 0, 0, 0.5)",
-    dark: "rgba(255, 255, 255, 0.5)",
+    light: 'rgba(0, 0, 0, 0.5)',
+    dark: 'rgba(255, 255, 255, 0.5)',
   },
   boxShadowColor: {
-    light: "rgba(0, 0, 0, 0.16",
-    dark: "rgba(0, 0, 0, 0.16",
+    light: 'rgba(0, 0, 0, 0.16',
+    dark: 'rgba(0, 0, 0, 0.16',
   },
   boxShadowHoverColor: {
-    light: "rgba(0, 0, 0, 0.32)",
-    dark: "rgba(0, 0, 0, 0.32)",
+    light: 'rgba(0, 0, 0, 0.32)',
+    dark: 'rgba(0, 0, 0, 0.32)',
   },
   codeBlockBg: {
-    light: "##f5f6f9",
-    dark: "#151f28",
+    light: '##f5f6f9',
+    dark: '#151f28',
   },
   codeBlockVar: {
-    light: "#da0078",
-    dark: "#ff39a7",
+    light: '#da0078',
+    dark: '#ff39a7',
   },
   codeBlockNum: {
-    light: "#bf04b7",
-    dark: "#fed703",
+    light: '#bf04b7',
+    dark: '#fed703',
   },
   codeBlockFun: {
-    light: "#3d5afe",
-    dark: "#c653ff",
+    light: '#3d5afe',
+    dark: '#c653ff',
   },
   codeBlockKeyword: {
-    light: "#fe4001",
-    dark: "#2bdcff",
+    light: '#fe4001',
+    dark: '#2bdcff',
   },
   codeBlockComment: {
-    light: "#7f7f7f",
-    dark: "#8292a2",
+    light: '#7f7f7f',
+    dark: '#8292a2',
   },
   codeBlockTkimp: {
-    light: "#fd971f",
-    dark: "#fd971f",
-  }
-}
+    light: '#fd971f',
+    dark: '#fd971f',
+  },
+};
 
 function setColorsByTheme() {
   const processName = (name) => {
-    let found_capitals = [...name.matchAll(/[A-Z]/g)];
+    const found_capitals = [...name.matchAll(/[A-Z]/g)];
 
-    let working_fragment = "";
-    let output = "";
+    let working_fragment = '';
+    let output = '';
     let working_index = 0;
 
-    found_capitals.forEach( (element, index, array) => {
-      if (index == 0 && index == array.length -1) {
-        output =  "--" + name.substring(working_index, element.index) + "-" + array[index][0].toLowerCase() + name.substring(element.index + 1);
-      }
-      else if (index == 0 && array.length > 1) {
-        let fragment = "--" + name.substring(working_index, element.index) + "-" + array[index][0].toLowerCase();
+    found_capitals.forEach((element, index, array) => {
+      if (index == 0 && index == array.length - 1) {
+        output = `--${name.substring(working_index, element.index)}-${array[index][0].toLowerCase()}${name.substring(element.index + 1)}`;
+      } else if (index == 0 && array.length > 1) {
+        const fragment = `--${name.substring(working_index, element.index)}-${array[index][0].toLowerCase()}`;
         working_index = element.index + 1;
         working_fragment = fragment;
-      } else if (index  > 0 &&  array.length -1 != index) {
-        let fragment = name.substring(working_index, element.index) + "-" + array[index][0].toLowerCase();
+      } else if (index > 0 && array.length - 1 != index) {
+        const fragment = `${name.substring(working_index, element.index)}-${array[index][0].toLowerCase()}`;
         working_index = element.index + 1;
-        working_fragment = working_fragment + fragment;
-      } else if (index > 0 && array.length -1 == index) {
-        let fragment = name.substring(working_index, element.index) + "-" + array[index][0].toLowerCase();
+        working_fragment += fragment;
+      } else if (index > 0 && array.length - 1 == index) {
+        let fragment = `${name.substring(working_index, element.index)}-${array[index][0].toLowerCase()}`;
         working_index = element.index + 1;
-        fragment = fragment + name.substring(working_index);
+        fragment += name.substring(working_index);
         output = working_fragment + fragment;
       }
-    }
-    );
+    });
     return output;
-  }
+  };
 
   const colors = '🌈';
   const mql = window.matchMedia('(prefers-color-scheme: dark)');
   const prefersDarkFromMQ = mql.matches;
 
   let colorMode = 'light';
-  if (prefersDarkFromMQ)
-    colorMode = 'dark';
+  if (prefersDarkFromMQ) colorMode = 'dark';
 
-  let root = document.documentElement;
+  const root = document.documentElement;
 
-  Object.entries(colors).forEach( ([name, colorByTheme]) => {
+  Object.entries(colors).forEach(([name, colorByTheme]) => {
     const cssVarName = processName(name);
 
     if (prefersDarkFromMQ) {
-      root.style.setProperty(cssVarName, colorByTheme["dark"]);
-    } else { root.style.setProperty(cssVarName, colorByTheme["light"]); }
+      root.style.setProperty(cssVarName, colorByTheme.dark);
+    } else { root.style.setProperty(cssVarName, colorByTheme.light); }
   });
 }
 
-const MagicScriptTag = () => {
+function MagicScriptTag() {
   const boundFn = String(setColorsByTheme)
     .replace("'🌈'", JSON.stringify(COLORS));
 
-  let calledFunction = `(${boundFn})()`;
+  const calledFunction = `(${boundFn})()`;
 
-  //eslint-disable-next-line react/no-danger
+  // eslint-disable-next-line react/no-danger
   return <script dangerouslySetInnerHTML={{ __html: calledFunction }} />;
 }
 
