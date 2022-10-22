@@ -1,14 +1,12 @@
-import React from "react";
-import { Helmet } from "react-helmet";
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
 export default function SiteThemeHelmet() {
-
-
-
-
-  return(
+  return (
     <Helmet>
-      <style type="text/css">{`
+      <style type="text/css">
+        {
+      `
       :root {
         --primary-color: #000;
         --secondary-color: #fff4d9;
@@ -54,9 +52,10 @@ export default function SiteThemeHelmet() {
       body {
         background-color: var(--background-color);
         color: var(--text-color);
-      }
-      `}</style>
+      }`
+        }
+      </style>
     </Helmet>
 
-  )
+  );
 }

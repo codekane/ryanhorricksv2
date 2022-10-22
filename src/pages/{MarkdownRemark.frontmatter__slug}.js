@@ -74,22 +74,26 @@ function PortfolioProjectDate(props) {
 
 function PortfolioProjectImageGallery(props) {
   const images = props.images;
-  const processedImages = images.map(image => {
-    return {
-      original: image.original.childImageSharp.fluid.src,
-      originalWidth: "1920px",
-      originalHeight: "975px",
-      thumbnail: image.thumbnail.childImageSharp.fluid.src,
-      thumbnailWidth: "92.8px",
-      thumbnailHeight: "47.15px",
-      originalAlt: image.alt,
-      thumbnailAlt: image.alt
-    }
-  });
+  let processedImages;
+
+
+  if (images) {
+    const processedImages = images.map(image => {
+      return {
+        original: image.original.childImageSharp.fluid.src,
+        originalWidth: "1920px",
+        originalHeight: "975px",
+        thumbnail: image.thumbnail.childImageSharp.fluid.src,
+        thumbnailWidth: "92.8px",
+        thumbnailHeight: "47.15px",
+        originalAlt: image.alt,
+        thumbnailAlt: image.alt
+      }
+    });
 
   return(
     <>
-      {processedImages && <ImageGallery items={processedImages} slideDuration={0} />}
+      {Boolean(images) && processedImages && <ImageGallery items={processedImages} slideDuration={0} />}
     </>
   )
 }
@@ -103,7 +107,8 @@ function PortfolioBackButton() {
   )
 }
 
-export default function Template({ data }) {
+/*export default*/
+export function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   const stack = data.markdownRemark.frontmatter.stack;
@@ -172,7 +177,7 @@ export const pageQuery = graphql`
                         alt
                       }
                       published
-                      github 
+                      github
                       live_url
                       stack
                       excerpt

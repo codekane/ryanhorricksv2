@@ -1,0 +1,23 @@
+// .eslintrc
+
+// Gatsby's required rules
+{
+  "parser": "babel-eslint", // uses babel-eslint transforms
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "node": true // defines things like process.env when generating through node
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "airbnb"
+  ],
+  "rules": {
+    "no-anonymous-exports-page-templates": "warn",
+    "limited-exports-page-templates": "warn"
+  }
+}
