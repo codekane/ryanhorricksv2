@@ -1,8 +1,8 @@
 ---
-slug: "/portfolio/opti-mized"
+slug: "/portfolio/sustainergy"
 date: "2022-09-22"
-title: "Opti-Mized.com"
-excerpt: "Another day, another dollar, another early-stage startup trying to change the world."
+title: "Sustainergy"
+excerpt: "Opti-Mized - Building Energy Usage Dashboard"
 thumbnail: "./thumbnails/opti-mized-logo.png"
 type: "project"
 stack:
