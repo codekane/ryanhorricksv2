@@ -11,24 +11,12 @@ stack:
   - "Angular"
 
 images:
-   - original: ""
-     thumbnail: ""
-     alt: "Alt Text"
-   - original: ""
-     thumbnail: ""
-     alt: "Alt Text"
-   - original: ""
-     thumbnail: ""
-     alt: "Alt Text"
-   - original: ""
-     thumbnail: ""
-     alt: "Alt Text"
-   - original: ""
-     thumbnail: ""
+   - original: "./Portfolio Images/Q.png"
+     thumbnail: "./Portfolio Images/Q.png"
      alt: "Alt Text"
 
 
 published: true
-live_url: "u"
+live_url: "https://opti-mized.com"
 github_url: ""
 ---

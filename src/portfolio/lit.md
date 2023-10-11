@@ -11,8 +11,8 @@ stack:
   - "Arduino"
 
 images:
-   - original: "./Portfolio Images/"
-     thumbnail: "./Portfolio Images/"
+   - original: "./Portfolio Images/Q.png"
+     thumbnail: "./Portfolio Images/Q.png"
      alt: "Alt Text"
 
 published: true
