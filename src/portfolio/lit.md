@@ -1,6 +1,6 @@
 ---
 slug: "/portfolio/lit"
-date: "2023-01-01"
+date: "2023-01-31"
 title: "Lit"
 excerpt: "Rave x Fashion x Technology"
 thumbnail: ""
